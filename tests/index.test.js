@@ -2,7 +2,8 @@ import 'regenerator-runtime/runtime'
 import JISG from '../src/'
 
 function sliceGenerator(generator, start, end) {
-  let i = 0, r = []
+  let i = 0
+  const r = []
   while (i++<start) {
     generator.next()
   }
@@ -31,8 +32,8 @@ describe('test beginning of sequences', () => {
     expect(sliceGenerator(jisg.A000035(), 0, 5)).toEqual([0, 1, 0, 1, 0])
   })
 
-  test('A000035', () => {
-    expect(sliceGenerator(jisg.A000035(), 0, 5)).toEqual([0, 1, 0, 1, 0])
+  test('A000040', () => {
+    expect(sliceGenerator(jisg.A000040(), 0, 5)).toEqual([0, 1, 0, 1, 0])
   })
 
 })

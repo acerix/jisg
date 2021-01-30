@@ -52,5 +52,8 @@
   },
   "prettier": {
     "singleQuote": true
+  },
+  "dependencies": {
+    "is-prime": "1.0.1"
   }
 }
