@@ -33,7 +33,7 @@ describe('test beginning of sequences', () => {
   })
 
   test('A000040', () => {
-    expect(sliceGenerator(jisg.A000040(), 0, 5)).toEqual([0, 1, 0, 1, 0])
+    expect(sliceGenerator(jisg.A000040(), 0, 5)).toEqual([2, 3, 5, 7, 11])
   })
 
 })
