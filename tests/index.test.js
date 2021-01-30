@@ -13,18 +13,26 @@ function sliceGenerator(generator, start, end) {
 }
 
 describe('test beginning of sequences', () => {
-  let jisg
-
-  beforeEach(() => {
-    jisg = new JISG()
-  })
-
-  afterEach(() => {
-    jisg = undefined
-  })
+  const jisg = new JISG()
 
   test('A000004', () => {
     expect(sliceGenerator(jisg.A000004(), 0, 5)).toEqual([0, 0, 0, 0, 0])
+  })
+
+  test('A000012', () => {
+    expect(sliceGenerator(jisg.A000012(), 0, 5)).toEqual([1, 1, 1, 1, 1])
+  })
+
+  test('A000027', () => {
+    expect(sliceGenerator(jisg.A000027(), 0, 5)).toEqual([1, 2, 3, 4, 5])
+  })
+
+  test('A000035', () => {
+    expect(sliceGenerator(jisg.A000035(), 0, 5)).toEqual([0, 1, 0, 1, 0])
+  })
+
+  test('A000035', () => {
+    expect(sliceGenerator(jisg.A000035(), 0, 5)).toEqual([0, 1, 0, 1, 0])
   })
 
 })
