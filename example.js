@@ -1,9 +1,8 @@
-'use strict';
+'use strict'
 
-/* global require */
+const regeneratorRuntime = require('regenerator-runtime')
+const JISG = require('./dist/index').default
 
-var People = require('./dist/index').default;
-
-var people = new People('Albert', '26');
-
-console.log(people.getPeople());
+for (let n of new JISG().A000004()) {
+    console.log(n)
+}

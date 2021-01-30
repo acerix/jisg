@@ -1,11 +1,9 @@
 {
-  "parser": "babel-eslint",
-  "extends": ["airbnb", "prettier"],
-  "plugins": ["react"],
+  "parser": "@babel/eslint-parser",
+  "extends": ["prettier"],
   "env": {
     "browser": true,
-    "node": true,
-    "jest": true
+    "node": true
   },
   "rules": {
     "max-len": [2, 80, 4, {"ignoreUrls": true, "ignoreComments": true}],
@@ -14,6 +12,6 @@
     "one-var-declaration-per-line": 0,
     "import/extensions": 0,
     "import/no-unresolved": 0,
-    "linebreak-style":"off"
+    "linebreak-style": "off"
   }
 }

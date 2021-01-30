@@ -23,8 +23,8 @@ Implementations of select [OEIS](http://oeis.org/) integer sequences in JavaScri
 - `yarn run test`: Run tests via `Jest`
 - `yarn run test -- --coverage`: Generates test coverage report via `Jest`
 - `yarn run example`: Run example to see if the transpiled code works or not.
-- `yarn run prepublish`: Clean, lint, test then build,
-- `yarn run pub`: Interactive way to checking, clean, test, bumping version, tag commits, push repo and publish
+- `yarn run prepare`: Clean, lint, test then build,
+- `yarn run publish`: Interactive way to checking, clean, test, bumping version, tag commits, push repo and publish
 
 ## Badges
 

@@ -1,7 +1,11 @@
 {
-    "presets": [ "env" ],
+    "presets": [ "@babel/preset-env" ],
+    "plugins": [
+        [
+            "@babel/plugin-proposal-class-properties"
+        ]
+    ],
     "ignore": [],
-    "plugins": [ "transform-object-rest-spread","transform-class-properties"],
     "sourceMaps": true,
     "retainLines": true
 }

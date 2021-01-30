@@ -1,29 +1,30 @@
-/* global it, describe, beforeEach, afterEach, expect */
+import 'regenerator-runtime/runtime'
+import JISG from '../src/'
 
-import People from '../src/';
+function sliceGenerator(generator, start, end) {
+  let i = 0, r = []
+  while (i++<start) {
+    generator.next()
+  }
+  while (i++<=end) {
+    r.push(generator.next().value)
+  }
+  return r
+}
 
-describe('developer tests', () => {
-  let people;
+describe('test beginning of sequences', () => {
+  let jisg
 
   beforeEach(() => {
-    people = new People('Albert', '26')
-  });
+    jisg = new JISG()
+  })
 
   afterEach(() => {
-    people = undefined
-  });
+    jisg = undefined
+  })
 
-  test('getName', () => {
-    expect(people.getName()).toEqual('Albert');
-  });
+  test('A000004', () => {
+    expect(sliceGenerator(jisg.A000004(), 0, 5)).toEqual([0, 0, 0, 0, 0])
+  })
 
-  test('getPeople', () => {
-    expect(people.getPeople()).toEqual('Albert is 26');
-  });
-
-  test('getNewObject', () => {
-    const newPeople = people.getNewObject();
-    expect(newPeople).not.toBe(people.people);
-    expect(newPeople).toEqual(people.people);    
-  });
-});
+})
