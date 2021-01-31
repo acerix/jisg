@@ -3,6 +3,9 @@ import A000012 from './oeis/A000012'
 import A000027 from './oeis/A000027'
 import A000035 from './oeis/A000035'
 import A000040 from './oeis/A000040'
+import A000043 from './oeis/A000043'
+import A000045 from './oeis/A000045'
+import A000079 from './oeis/A000079'
 
 export default class JISG {
     A000004 = A000004;
@@ -10,49 +13,11 @@ export default class JISG {
     A000027 = A000027;
     A000035 = A000035;
     A000040 = A000040;
+    A000043 = A000043;
+    A000045 = A000045;
+    A000079 = A000079;
 
 /*
-    # The primes
-    def A000040():
-    for n in yield_prime():
-        yield n
-
-    # Mersenne exponents
-    @cached_pure_generator
-    def A000043():
-        n = 2
-    while True:
-    if is_prime(n) and is_prime(2 ** n - 1):
-    yield n
-    n += 1
-
-    # Fibonacci numbers
-    def A000045():
-        [previous, current] = [0, 1]
-
-    yield previous
-    yield current
-
-    while True:
-        [previous, current] = [current, current + previous]
-    yield current
-
-    # Powers of 2
-    def A000079():
-        n = 0
-    while True:
-        yield 2 ** n
-    n += 1
-
-    # Catalan numbers
-    def A000108():
-        n = 0
-    while True:
-        x = math.factorial(2 * n)
-    x /= math.factorial(n + 1) * math.factorial(n)
-    yield int(x)
-    n += 1
-
     # Triangular numbers
     def A000217():
         n = 0

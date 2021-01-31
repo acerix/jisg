@@ -36,4 +36,16 @@ describe('test beginning of sequences', () => {
     expect(sliceGenerator(jisg.A000040(), 0, 5)).toEqual([2, 3, 5, 7, 11])
   })
 
+  test('A000043', () => {
+    expect(sliceGenerator(jisg.A000043(), 0, 5)).toEqual([2, 3, 5, 7, 13])
+  })
+
+  test('A000045', () => {
+    expect(sliceGenerator(jisg.A000045(), 0, 5)).toEqual([0, 1, 1, 2, 3])
+  })
+
+  test('A000079', () => {
+    expect(sliceGenerator(jisg.A000079(), 0, 5)).toEqual([1, 2, 4, 8, 16])
+  })
+
 })
