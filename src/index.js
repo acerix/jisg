@@ -6,6 +6,8 @@ import A000040 from './oeis/A000040'
 import A000043 from './oeis/A000043'
 import A000045 from './oeis/A000045'
 import A000079 from './oeis/A000079'
+import A000217 from './oeis/A000217'
+import A000290 from './oeis/A000290'
 
 export default class JISG {
     A000004 = A000004;
@@ -16,24 +18,10 @@ export default class JISG {
     A000043 = A000043;
     A000045 = A000045;
     A000079 = A000079;
+    A000217 = A000217;
+    A000290 = A000290;
 
 /*
-    # Triangular numbers
-    def A000217():
-        n = 0
-    sum = 0
-    while True:
-        sum += n
-    yield sum
-    n += 1
-
-    # The squares
-    def A000290():
-        n = 0
-    while True:
-        yield n ** 2
-    n += 1
-
     # Square pyramidal numbers
     def A000330():
         n = 0
