@@ -5,6 +5,7 @@
             "@babel/plugin-proposal-class-properties"
         ]
     ],
+    comments: false,
     "ignore": [],
     "sourceMaps": true,
     "retainLines": true
