@@ -4,6 +4,6 @@ export default function* A000330() {
     while (true) {
         sum += Math.pow(n, 2)
         yield sum
-        n += 1
+        n++
     }
 }

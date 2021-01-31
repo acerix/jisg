@@ -11,8 +11,13 @@ Implementations of select [OEIS](http://oeis.org/) integer sequences in JavaScri
 1. Install
    - `yarn add jisg`
 1. Use
-   - `import JISG from 'jisg'`
-   - `for (const n in JISG.A000045) console.log(n)`
+```js
+import JISG from 'jisg'
+const jisg = new JISG()
+for (const n of jisg.A000045()) {
+   console.log(n)
+}
+```
 
 ## Commands
 
@@ -24,18 +29,4 @@ Implementations of select [OEIS](http://oeis.org/) integer sequences in JavaScri
 - `yarn run test -- --coverage`: Generates test coverage report via `Jest`
 - `yarn run example`: Run example to test transpiled code
 - `yarn run prepare`: Clean, lint, test then build
-- `yarn run publish`: Interactive way to checking, clean, test, bumping version, tag commits, push repo and publish
-
-## Badges
-
-We currently have 3 badges here:
-
-- Version: Generate your own at [https://badge.fury.io/](https://badge.fury.io/)
-- Licence: Generate your own at [http://shields.io/](http://shields.io/)
-- Building status: If you travis, open your project there, there should be badge at the top part, click it to get your own.
-
-## About travis
-
-Instead of running the default `test` command, we will run the `yarn run prepare` since it including all the phases for the final release.
-
-And in the readme.md, we have a status icon which shows how to add that building status from Travis. Do remember to modify its URL after forking your repo.
+- `yarn run publish`: Interactive check, clean, test, bumping version, tag commits, push repo and publish

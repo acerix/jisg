@@ -1,11 +1,15 @@
 import A000004 from './oeis/A000004'
+import A000010 from './oeis/A000010'
 import A000012 from './oeis/A000012'
 import A000027 from './oeis/A000027'
 import A000035 from './oeis/A000035'
 import A000040 from './oeis/A000040'
+import A000042 from './oeis/A000042'
 import A000043 from './oeis/A000043'
 import A000045 from './oeis/A000045'
 import A000079 from './oeis/A000079'
+import A000108 from './oeis/A000108'
+import A000142 from './oeis/A000142'
 import A000217 from './oeis/A000217'
 import A000290 from './oeis/A000290'
 import A000330 from './oeis/A000330'
@@ -26,13 +30,17 @@ import A063737 from './oeis/A063737'
 
 export default class JISG {
     A000004 = A000004;
+    A000010 = A000010;
     A000012 = A000012;
     A000027 = A000027;
     A000035 = A000035;
     A000040 = A000040;
+    A000042 = A000042;
     A000043 = A000043;
     A000045 = A000045;
     A000079 = A000079;
+    A000108 = A000108;
+    A000142 = A000142;
     A000217 = A000217;
     A000290 = A000290;
     A000330 = A000330;
