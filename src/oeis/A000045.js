@@ -4,7 +4,7 @@ export default function* A000045() {
     yield previous
     yield current
     while (true) {
-        let sum = current + previous
+        const sum = current + previous
         previous = current
         current = sum
         yield current

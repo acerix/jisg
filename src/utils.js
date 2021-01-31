@@ -17,7 +17,7 @@ export function prime_factorization(n, multiplicity=false) {
         return [n]
     }
     const result = []
-    for (let i of yield_prime()) {
+    for (const i of yield_prime()) {
         let appended = false
         while (n % i === 0) {
             if (multiplicity || !appended) {

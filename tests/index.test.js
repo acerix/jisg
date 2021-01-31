@@ -1,5 +1,6 @@
 import 'regenerator-runtime/runtime'
 import JISG from '../src/'
+const jisg = new JISG()
 
 function slice_generator(generator, start, end) {
   let i = 0
@@ -58,7 +59,6 @@ describe('test beginning of sequences', () => {
     'A019506': [22, 58, 84, 85, 94, 136, 160, 166, 202, 234, 250, 265, 274, 308, 319, 336, 346, 355, 361, 364, 382, 391, 424, 438, 454, 456, 476, 483, 516, 517, 526, 535, 562, 627, 634, 644, 645, 650, 654, 660, 663, 690, 702, 706, 732, 735, 762, 778, 855, 860, ],
     'A063737': [2, 3, 4, 5, 7, 27, 378, 576, 588, 648, 729, 2688, ],
   }
-  const jisg = new JISG()
   for (const [id, samples] of Object.entries(OEIS_START_SAMPLES)) {
     test(id, () => {
       expect(slice_generator(jisg[id](), 0, samples.length)).toEqual(samples)

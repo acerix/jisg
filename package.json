@@ -40,6 +40,7 @@
     "@babel/eslint-parser": "*",
     "@babel/plugin-proposal-class-properties": "*",
     "@babel/preset-env": "*",
+    "babel-minify": "*",
     "eslint": "*",
     "eslint-config-prettier": "*",
     "eslint-plugin-import": "*",
