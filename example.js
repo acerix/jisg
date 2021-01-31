@@ -23,6 +23,6 @@ function slice_generator(generator, start, end) {
     return r
 }
 
-for (const n of slice_generator(jisg.A000002(),0,20)) {
+for (const n of slice_generator(jisg.A000006(),0,20)) {
     console.log(n)
 }

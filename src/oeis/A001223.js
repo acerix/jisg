@@ -1,9 +1,9 @@
 // Prime gaps
-import yield_prime from './A000040'
+import A000040 from './A000040'
 export default function* A001223() {
-    const primes = yield_prime()
+    const primes = A000040()
     let p = primes.next().value
-    for (let n of primes) {
+    for (const n of primes) {
         yield n - p
         p = n
     }
