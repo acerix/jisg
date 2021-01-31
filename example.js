@@ -5,7 +5,6 @@ const JISG = require('./dist/index').default
 
 const jisg = new JISG()
 
-//for (let n of jisg.A000040()) {
-for (let n of jisg.A001223()) {
+for (let n of jisg.A000040()) {
     console.log(n)
 }
