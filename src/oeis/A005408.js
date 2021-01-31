@@ -1,4 +1,8 @@
 // The odd numbers
 export default function* A005408() {
-    yield 0
+    let n = 1
+    while (true) {
+        yield n
+        n += 2
+    }
 }

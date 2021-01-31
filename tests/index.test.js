@@ -72,19 +72,19 @@ describe('test beginning of sequences', () => {
     expect(sliceGenerator(jisg.A001462(), 0, 5)).toEqual([1, 2, 2, 3, 3])
   })
 
+  test('A002024', () => {
+    expect(sliceGenerator(jisg.A002024(), 0, 5)).toEqual([1, 2, 2, 3, 3])
+  })
+
+  test('A005408', () => {
+    expect(sliceGenerator(jisg.A005408(), 0, 5)).toEqual([1, 3, 5, 7, 9])
+  })
+
+  test('A005843', () => {
+    expect(sliceGenerator(jisg.A005843(), 0, 5)).toEqual([0, 2, 4, 6, 8])
+  })
+
   /*
-    test('A002024', () => {
-      expect(sliceGenerator(jisg.A002024(), 0, 5)).toEqual([1, 2, 2, 3, 3])
-    })
-
-    test('A005408', () => {
-      expect(sliceGenerator(jisg.A005408(), 0, 5)).toEqual([1, 3, 5, 7, 9])
-    })
-
-    test('A005843', () => {
-      expect(sliceGenerator(jisg.A005843(), 0, 5)).toEqual([0, 2, 4, 6, 8])
-    })
-
     test('A006530', () => {
       expect(sliceGenerator(jisg.A006530(), 0, 5)).toEqual([1, 2, 3, 2, 5])
     })
