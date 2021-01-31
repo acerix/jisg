@@ -65,3 +65,12 @@ export function factorial(n) {
     }
     return n
 }
+
+export function decimal_to_binary_digits(n) {
+    const r = []
+    while (n > 0) {
+        r.unshift(n % 2)
+        n = Math.floor(n / 2)
+    }
+    return r.join('')
+}
