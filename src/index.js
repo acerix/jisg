@@ -40,6 +40,8 @@ import A010051 from './oeis/A010051'
 import A010054 from './oeis/A010054'
 import A019506 from './oeis/A019506'
 import A063737 from './oeis/A063737'
+import A123456 from './oeis/A123456'
+import randint from './randint'
 
 export default class JISG {
     A000001 = A000001;
@@ -85,4 +87,6 @@ export default class JISG {
     A010054 = A010054;
     A019506 = A019506;
     A063737 = A063737;
+    A123456 = A123456;
+    randint = randint;
 }

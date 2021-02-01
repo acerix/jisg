@@ -27,7 +27,7 @@
   "scripts": {
     "lint": "eslint src tests",
     "clean": "rimraf dist/",
-    "build": "rimraf dist/ && babel src --out-file dist/jisg.js",
+    "build": "rimraf dist/ && babel src -d dist",
     "test": "./node_modules/.bin/jest",
     "check": "./node_modules/.bin/npm-check -u",
     "example": "node example.js",
