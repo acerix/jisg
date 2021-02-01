@@ -1,9 +1,9 @@
 // Factorial numbers
-import {factorial} from '../utils'
 export default function* A000142() {
-    let n = 0
+    let n = 1, r = 1
     while (true) {
-        yield factorial(n)
+        yield r
+        r *= n
         n++
     }
 }

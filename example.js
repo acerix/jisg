@@ -10,7 +10,7 @@ for (const n of jisg.A000045()) {
 }
 */
 
-const generator = jisg.A000040()
+const generator = jisg.A000142()
 //const generator = jisg.randint()
 
 for (let i=0; i<43; i++) {
