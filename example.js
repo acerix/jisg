@@ -10,17 +10,9 @@ for (const n of jisg.A000045()) {
 }
 */
 
-/*
-const generator = jisg.A000005()
-for (let i=0; i<70; i++) {
-    console.log('\nn =', i)
-    console.log('v =', generator.next().value)
-}
-*/
+const generator = jisg.A000040()
+//const generator = jisg.randint()
 
-const generator = jisg.randint()
-for (let i=0; i<70; i++) {
+for (let i=0; i<43; i++) {
     console.log(generator.next().value)
 }
-
-console.log('')
