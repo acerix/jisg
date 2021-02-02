@@ -24,6 +24,7 @@ import A000142 from './oeis/A000142'
 import A000217 from './oeis/A000217'
 import A000290 from './oeis/A000290'
 import A000330 from './oeis/A000330'
+import A000400 from './oeis/A000400'
 import A000420 from './oeis/A000420'
 import A000666 from './oeis/A000666'
 import A000668 from './oeis/A000668'
@@ -71,6 +72,7 @@ export default class JISG {
     A000290 = A000290;
     A000330 = A000330;
     A000330 = A000330;
+    A000400 = A000400;
     A000420 = A000420;
     A000666 = A000666;
     A000668 = A000668;
