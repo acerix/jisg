@@ -68,7 +68,7 @@ describe('test beginning of sequences', () => {
 })
 
 describe('test randomness', () => {
-  test('randint', () => {
-  expect(jisg.randint()%2).toEqual(jisg.randint()%2)
+  test('randint should not be deterministic', () => {
+    expect(jisg.randint().next().value === jisg.randint().next().value).toEqual(false)
   })
 })
