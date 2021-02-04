@@ -2,6 +2,7 @@
   "name": "jisg",
   "version": "0.0.1",
   "license": "MIT",
+  "type": "module",
   "engine": "node > 5",
   "main": "dist/index.js",
   "description": "Implementations of select OEIS integer sequences in JavaScript.",

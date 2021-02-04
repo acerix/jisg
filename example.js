@@ -1,7 +1,8 @@
 'use strict'
 
 //const regeneratorRuntime = require('regenerator-runtime')
-const JISG = require('./dist/jisg').default
+//const JISG = require('./dist/jisg').default
+import JISG from './dist/jisg.js'
 const jisg = new JISG()
 
 /*

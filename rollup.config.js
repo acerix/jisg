@@ -12,7 +12,14 @@ export default {
         commonjs(),
         babel({
             babelHelpers: 'runtime',
-            "presets": [ "@babel/preset-env" ],
+            "presets": [
+                [
+                    "@babel/preset-env",
+                    {
+                        "targets": "defaults"
+                    }
+                ]
+            ],
             "env": {
                 "production": {
                     "presets": ["minify"]
@@ -29,7 +36,7 @@ export default {
             comments: false,
             "ignore": [],
             "sourceMaps": true,
-            "retainLines": true
+            "retainLines": false
         })
     ]
 }
