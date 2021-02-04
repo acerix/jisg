@@ -1,6 +1,6 @@
 {
   "name": "jisg",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "MIT",
   "type": "module",
   "engine": "node > 5",
