@@ -1,10 +1,10 @@
 {
   "name": "jisg",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "license": "MIT",
   "type": "module",
   "engine": "node > 5",
-  "main": "dist/jisg.js",
+  "main": "dist/jisg.cjs",
   "description": "Implementations of select OEIS integer sequences in JavaScript.",
   "author": "Dylan Ferris",
   "contributors": [
