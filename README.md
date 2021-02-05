@@ -12,21 +12,21 @@ Implementations of select [OEIS](http://oeis.org/) integer sequences in JavaScri
    - `yarn add jisg`
 1. Use
 ```js
-import JISG from 'jisg'
-const jisg = new JISG()
-for (const n of jisg.A000045()) {
-   console.log(n)
+import jisg from 'jisg'
+const generator = jisg.A000045()
+for (let i=0; i<43; i++) {
+   console.log(generator.next().value)
 }
 ```
 
 ## Commands
 
-- `yarn run check` : Checking the updates of all your dependencies
-- `yarn run lint` : Linting via ESLint
-- `yarn run clean` : Clean the `./dist` folder
-- `yarn run build`: Clean and build `src` to `dist`
-- `yarn run test`: Run tests via `Jest`
-- `yarn run test -- --coverage`: Generates test coverage report via `Jest`
-- `yarn run example`: Run example to test transpiled code
-- `yarn run prepare`: Clean, lint, test then build
-- `yarn run publish`: Interactive check, clean, test, bumping version, tag commits, push repo and publish
+- `yarn check` : Checking the updates of all your dependencies
+- `yarn lint` : Linting via ESLint
+- `yarn clean` : Clean the `./dist` folder
+- `yarn build`: Clean and build `src` to `dist`
+- `yarn test`: Run tests via `Jest`
+- `yarn test --coverage`: Generates test coverage report via `Jest`
+- `yarn example`: Run example to test transpiled code
+- `yarn prepare`: Clean, lint, test then build
+- `yarn publish`: Interactive check, clean, test, bumping version, tag commits, push repo and publish

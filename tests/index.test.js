@@ -1,6 +1,5 @@
 import 'regenerator-runtime/runtime'
-import JISG from '../src/'
-const jisg = new JISG()
+import JISG from '../src/index'
 
 function slice_generator(generator, start, end) {
   let i = 0
@@ -63,13 +62,13 @@ describe('test beginning of sequences', () => {
   }
   for (const [id, samples] of Object.entries(OEIS_START_SAMPLES)) {
     test(id, () => {
-      expect(slice_generator(jisg[id](), 0, samples.length)).toEqual(samples)
+      expect(slice_generator(JISG[id](), 0, samples.length)).toEqual(samples)
     })
   }
 })
 
 describe('test randomness', () => {
   test('randint should not be deterministic', () => {
-    expect(jisg.randint().next().value === jisg.randint().next().value).toEqual(false)
+    expect(JISG.randint().next().value === JISG.randint().next().value).toEqual(false)
   })
 })
