@@ -32,7 +32,7 @@
     "test": "./node_modules/.bin/jest",
     "check": "./node_modules/.bin/npm-check -u",
     "example": "node example.js",
-    "prepare": "npm run clean && npm run lint && npm run test && npm run build",
+    "prepare": "yarn clean && yarn lint && yarn test && yarn build",
     "publish": "./node_modules/.bin/np || true"
   },
   "dependencies": {
