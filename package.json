@@ -32,8 +32,7 @@
     "test": "./node_modules/.bin/jest",
     "check": "./node_modules/.bin/npm-check -u",
     "example": "node example.js",
-    "prepare": "yarn clean && yarn lint && yarn test && yarn build",
-    "publish": "./node_modules/.bin/np || true"
+    "prepare": "yarn clean && yarn lint && yarn test && yarn build"
   },
   "dependencies": {
     "is-prime": "*"
