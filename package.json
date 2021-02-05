@@ -4,7 +4,7 @@
   "license": "MIT",
   "type": "module",
   "engine": "node > 5",
-  "main": "dist/jisg.cjs",
+  "main": "dist/jisg.mjs",
   "description": "Implementations of select OEIS integer sequences in JavaScript.",
   "author": "Dylan Ferris",
   "contributors": [

@@ -1,6 +1,6 @@
 'use strict'
 
-import jisg from './dist/jisg.js'
+import jisg from './dist/jisg.mjs'
 
 const generator = jisg.A000045()
 

@@ -1,27 +1,27 @@
 {
-            "presets": [
-                [
-                    "@babel/preset-env",
-                    {
-                        "targets": "defaults"
-                    }
-                ]
-            ],
-            "env": {
-                "production": {
-                    "presets": ["minify"]
-                }
-            },
-            "plugins": [
-                [
-                    "@babel/plugin-proposal-class-properties"
-                ],
-                [
-                    "@babel/plugin-transform-runtime"
-                ]
-            ],
-            comments: false,
-            "ignore": [],
-            "sourceMaps": true,
-            "retainLines": false
+  "presets": [
+      [
+          "@babel/preset-env",
+          {
+              "targets": "defaults"
+          }
+      ]
+  ],
+  "env": {
+      "production": {
+          "presets": ["minify"]
+      }
+  },
+  "plugins": [
+      [
+          "@babel/plugin-proposal-class-properties"
+      ],
+      [
+          "@babel/plugin-transform-runtime"
+      ]
+  ],
+  comments: false,
+  "ignore": [],
+  "sourceMaps": true,
+  "retainLines": false
 }
