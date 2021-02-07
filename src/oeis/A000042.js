@@ -1,4 +1,4 @@
-//	Unary representation of natural numbers
+// Unary representation of natural numbers
 export default function* A000042() {
     let s = ''
     while (true) {
