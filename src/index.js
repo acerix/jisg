@@ -31,6 +31,7 @@ import A000668 from './oeis/A000668'
 import A001223 from './oeis/A001223'
 import A001462 from './oeis/A001462'
 import A002024 from './oeis/A002024'
+import A003238 from './oeis/A003238'
 import A005408 from './oeis/A005408'
 import A005843 from './oeis/A005843'
 import A006530 from './oeis/A006530'
@@ -78,6 +79,7 @@ export default {
     A001223,
     A001462,
     A002024,
+    A003238,
     A005408,
     A005843,
     A006530,
