@@ -23,9 +23,11 @@ import A000108 from './oeis/A000108'
 import A000142 from './oeis/A000142'
 import A000217 from './oeis/A000217'
 import A000290 from './oeis/A000290'
+import A000292 from './oeis/A000292'
 import A000330 from './oeis/A000330'
 import A000400 from './oeis/A000400'
 import A000420 from './oeis/A000420'
+import A000578 from './oeis/A000578'
 import A000666 from './oeis/A000666'
 import A000668 from './oeis/A000668'
 import A001223 from './oeis/A001223'
@@ -43,6 +45,7 @@ import A010054 from './oeis/A010054'
 import A019506 from './oeis/A019506'
 import A063737 from './oeis/A063737'
 import A123456 from './oeis/A123456'
+import A134816 from './oeis/A134816'
 import randint from './extra/randint'
 
 export default {
@@ -71,9 +74,11 @@ export default {
     A000142,
     A000217,
     A000290,
+    A000292,
     A000330,
     A000400,
     A000420,
+    A000578,
     A000666,
     A000668,
     A001223,
@@ -91,5 +96,6 @@ export default {
     A019506,
     A063737,
     A123456,
+    A134816,
     randint,
 }
