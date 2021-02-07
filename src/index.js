@@ -1,3 +1,13 @@
+
+/*
+const glob = require('glob')
+const options = {}
+glob('./oeis/*.js', options, function (error, files) {
+    //console.log(files)
+    console.log(files)
+})
+*/
+
 import A000001 from './oeis/A000001'
 import A000002 from './oeis/A000002'
 import A000003 from './oeis/A000003'
