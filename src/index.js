@@ -20,18 +20,24 @@ import A000045 from './oeis/A000045'
 import A000069 from './oeis/A000069'
 import A000079 from './oeis/A000079'
 import A000108 from './oeis/A000108'
+import A000111 from './oeis/A000111'
 import A000142 from './oeis/A000142'
 import A000217 from './oeis/A000217'
+import A000222 from './oeis/A000222'
 import A000290 from './oeis/A000290'
 import A000292 from './oeis/A000292'
 import A000330 from './oeis/A000330'
+import A000333 from './oeis/A000333'
 import A000400 from './oeis/A000400'
 import A000420 from './oeis/A000420'
+import A000444 from './oeis/A000444'
+import A000555 from './oeis/A000555'
 import A000578 from './oeis/A000578'
 import A000666 from './oeis/A000666'
 import A000668 from './oeis/A000668'
 import A000777 from './oeis/A000777'
 import A000888 from './oeis/A000888'
+import A000999 from './oeis/A000999'
 import A001223 from './oeis/A001223'
 import A001462 from './oeis/A001462'
 import A002024 from './oeis/A002024'
@@ -73,18 +79,24 @@ export default {
     A000069,
     A000079,
     A000108,
+    A000111,
     A000142,
     A000217,
+    A000222,
     A000290,
     A000292,
     A000330,
+    A000333,
     A000400,
     A000420,
+    A000444,
+    A000555,
     A000578,
     A000666,
     A000668,
     A000777,
     A000888,
+    A000999,
     A001223,
     A001462,
     A002024,
