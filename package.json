@@ -3,7 +3,7 @@
   "version": "0.3.0",
   "license": "MIT",
   "type": "module",
-  "engine": "node > 5",
+  "engine": "node >= 14",
   "main": "dist/jisg.mjs",
   "description": "Implementations of select OEIS integer sequences in JavaScript.",
   "author": "Dylan Ferris",
