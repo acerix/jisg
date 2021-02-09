@@ -1,14 +1,23 @@
 #!/usr/bin/env python
 
+# This loops through all OEIS's, scraping the description and beginning of the sequences from oeis.org
+# and using it to write test cases and generator functions that return the sequences.
+# It results in 1.2 GB of code of which many sequences are not super useful or interesting.
+# So this was only run on the first 255 for now.
+
+# Remove this to actually run the script
+raise Exception('Script is disabled')
+
 import requests
 from lxml import html
 
 session = requests.Session()
 test_file = open('../tests/new.js', 'w')
 
-for i in range(1, 341300):
+# for i in range(1, 341300):
+for i in range(1, 256):
     oeis_id = f'A{i:06}'
-    filename = f'./oeis/{oeis_id}.js'
+    filename = f'../src/oeis/{oeis_id}.js'
     try:
         file = open(filename, 'r')
         print(f'{oeis_id} already exists')
