@@ -5,9 +5,7 @@ export default function* A006530() {
     let n = 2
     while (true) {
         const pf = prime_factorization(n)
-        if (pf.length) {
-            yield pf.pop()
-        }
+        yield pf.pop()
         n++
     }
 }
