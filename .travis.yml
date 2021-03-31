@@ -1,9 +1,2 @@
-sudo: false
 language: node_js
-node_js:
-  - '8'
-  - '7'
-  - '6'
-matrix:
-  fast_finish: true
-script: npm run prepare
+script: yarn prepare
