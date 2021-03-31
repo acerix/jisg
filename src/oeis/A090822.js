@@ -12,8 +12,8 @@ export default function* A090822() {
         }
         // b(n+1) = b(n) + b(n) + s(n)
         b = b.concat(b, s)
-        s = []
         // discover the glue sequence s(n) so that b(n) + b(n) + s(n) starts the sequence
+        s = []
         while (true) {
             let r = 0
             // search b(n) + b(n) + discovered part of s(n)
@@ -29,6 +29,7 @@ export default function* A090822() {
                 }
                 r = Math.max(r, c)
             }
+            // s ends if there is a 1
             if (r === 1) {
                 break
             }
