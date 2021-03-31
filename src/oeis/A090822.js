@@ -17,7 +17,7 @@ export default function* A090822() {
         while (true) {
             let r = 0
             // search b(n) + b(n) + discovered part of s(n)
-            let p = b.concat(b, s)
+            const p = b.concat(b, s)
             // test blocks of increasing size
             for (let i = 1; i <= p.length / 2; i++) {
                 // count how many times the block is repeated
