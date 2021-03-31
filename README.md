@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/jisg.svg)](https://badge.fury.io/js/jisg)
 [![npm](https://img.shields.io/npm/l/express.svg)](https://www.npmjs.com/package/jisg)
-[![Build Status](https://travis-ci.org/acerix/jisg.svg?branch=master)](https://travis-ci.org/acerix/jisg)
+[![Build Status](https://travis-ci.org/acerix/jisg.svg?branch=main)](https://travis-ci.org/acerix/jisg)
 
 Implementations of select [OEIS](http://oeis.org/) integer sequences in JavaScript, portially inspired by [intseq](https://github.com/nicross/intseq).
 
