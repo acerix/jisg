@@ -282,6 +282,7 @@ import A010051 from '../src/oeis/A010051'
 import A010054 from '../src/oeis/A010054'
 import A019506 from '../src/oeis/A019506'
 import A090822 from '../src/oeis/A090822'
+import A059252 from '../src/oeis/A059252'
 import A063737 from '../src/oeis/A063737'
 import A123456 from '../src/oeis/A123456'
 import A134816 from '../src/oeis/A134816'
@@ -571,6 +572,7 @@ export default {
   A010051,
   A010054,
   A019506,
+  A059252,
   A063737,
   A090822,
   A123456,
