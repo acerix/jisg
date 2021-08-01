@@ -45,7 +45,7 @@ for (let i of A000045()) {
 document.write(A000045().slice(0, 10))
 ```
 
-[CodePen Demo](https://codepen.io/acerix/pen/GRmvmYL?editors=0010)
+[CodePen Demo](https://codepen.io/acerix/pen/MWmXbrO?editors=0010)
 
 ### In Your Browser
 
