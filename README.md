@@ -1,32 +1,87 @@
-# JavaScript Integer Sequence Generators
+# jisg - JavaScript Integer Sequence Generators
 
-[![npm version](https://badge.fury.io/js/jisg.svg)](https://badge.fury.io/js/jisg)
-[![npm](https://img.shields.io/npm/l/express.svg)](https://www.npmjs.com/package/jisg)
-[![Build Status](https://travis-ci.org/acerix/jisg.svg?branch=main)](https://travis-ci.org/acerix/jisg)
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
+[![Build Status][build-image]][build-url]
+[![Code Coverage][coverage-image]][coverage-url]
+[![Scrutinizer Code Quality][scrutinizer-image]][scrutinizer-url]
+[![GPL 3.0][license-image]](LICENSE)
 
 Implementations of select [OEIS](http://oeis.org/) integer sequences in JavaScript, portially inspired by [intseq](https://github.com/nicross/intseq).
 
-## How to use
+## Install
 
-1. Install
-   - `yarn add jisg`
-1. Use
-```js
-import jisg from 'jisg'
-const generator = jisg.A000045()
+```bash
+yarn add jisg
+```
+
+## Usage
+
+### Build System
+
+```typescript
+import {A000045} from 'jisg'
+const generator = A000045()
 for (let i=0; i<43; i++) {
    console.log(generator.next().value)
 }
 ```
 
-## Commands
+### Node
 
-- `yarn check` : Checking the updates of all your dependencies
-- `yarn lint` : Linting via ESLint
-- `yarn clean` : Clean the `./dist` folder
-- `yarn build`: Clean and build `src` to `dist`
-- `yarn test`: Run tests via `Jest`
-- `yarn test --coverage`: Generates test coverage report via `Jest`
-- `yarn example`: Run example to test transpiled code
-- `yarn prepare`: Clean, lint, test then build
-- `yarn publish`: Interactive check, clean, test, bumping version, tag commits, push repo and publish
+```js
+const {A000045} = require('jisg')
+for (let i of A000045()) {
+  console.log(i)
+}
+```
+
+### Script Tags
+
+```html
+<script src="//unpkg.com/jisg"></script>
+```
+```js
+document.write(A000045().slice(0, 10))
+```
+
+[CodePen Demo](https://codepen.io/acerix/pen/GRmvmYL?editors=0010)
+
+### In Your Browser
+
+[Try with RunKit](https://npm.runkit.com/jisg)
+
+## Read the Docs
+
+[Documentation](https://acerix.github.io/jisg/)
+
+## CLI Commands
+
+*   `yarn install`: Install dependencies
+*   `yarn dev`: Run tests when source files are changed
+*   `yarn cli`: Start a command line interface
+*   `yarn lint`: Lint with ESLint
+*   `yarn test`: Run Jest and Enzyme tests
+*   `yarn clean`: Delete previous build
+*   `yarn docs`: Build documentation
+*   `yarn build`: Production build
+*   `yarn build-all`: Production build all the things
+*   `yarn prepublish`: Prepare for publishing
+*   `yarn publish`: Publish to npm
+
+## Feedback
+
+* Please report bug and feature requests as [GitHub Issues](https://github.com/acerix/jisg/issues)
+
+[npm-image]: https://img.shields.io/npm/v/jisg.svg
+[npm-url]: https://npmjs.org/package/jisg
+[downloads-image]: https://img.shields.io/npm/dm/jisg.svg
+[downloads-url]: https://npmjs.org/package/jisg
+[build-image]: https://github.com/acerix/jisg/workflows/Test/badge.svg
+[build-url]: https://github.com/acerix/jisg/actions?query=workflow%2ATest
+[coverage-image]: https://scrutinizer-ci.com/g/acerix/jisg/badges/coverage.png?b=main
+[coverage-url]: https://scrutinizer-ci.com/g/acerix/jisg/?branch=main
+[scrutinizer-image]: https://scrutinizer-ci.com/g/acerix/jisg/badges/quality-score.png?b=main
+[scrutinizer-url]: https://scrutinizer-ci.com/g/acerix/jisg/?branch=main
+[license-image]: https://img.shields.io/npm/l/jisg.svg
+

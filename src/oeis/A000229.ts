@@ -1,0 +1,6 @@
+// a(n) is the least number m such that the n-th prime is the least quadratic nonresidue modulo m.
+export default function* A000229(): Generator<number> {
+  for (const n of [3, 7, 23, 71, 311, 479, 1559, 5711, 10559, 18191, 31391, 422231, 701399, 366791, 3818929, 9257329, 22000801, 36415991, 48473881, 175244281, 120293879, 427733329, 131486759, 3389934071, 2929911599, 7979490791, 36504256799, 23616331489, 89206899239, 121560956039, ]) {
+    yield n
+  }
+}

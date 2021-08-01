@@ -1,0 +1,18 @@
+checks:
+    javascript: true
+build:
+    environment:
+        node: v12
+    nodes:
+        analysis:
+            tests:
+                override:
+                    - js-scrutinizer-run
+        coverage:
+            tests:
+                override:
+                    -  
+                        command: 'yarn test --coverage'
+                        coverage:
+                            file: 'coverage/clover.xml'
+                            format: clover

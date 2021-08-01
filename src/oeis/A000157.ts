@@ -1,0 +1,6 @@
+// Number of Boolean functions of n variables.
+export default function* A000157(): Generator<number> {
+  for (const n of [1, 2, 7, 111, 308063, 100126976263592, 131867858014413288241233435594064, 2804519150441879896741320496043335469582478995067528608051651559815168, ]) {
+    yield n
+  }
+}

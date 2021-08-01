@@ -1,67 +1,68 @@
 {
   "name": "jisg",
-  "version": "0.4.4",
-  "license": "MIT",
-  "type": "module",
-  "engine": "node >= 14",
-  "main": "dist/jisg.mjs",
+  "version": "0.5.0",
   "description": "Implementations of select OEIS integer sequences in JavaScript.",
-  "author": "Dylan Ferris",
+  "author": "Dylan Ferris <dylan@psilly.com>",
   "contributors": [
     {
       "name": "Dylan Ferris",
       "email": "dylan@psilly.com",
-      "uri": "https://psilly.com"
+      "uri": "https://psilly.com/"
     }
   ],
   "homepage": "https://github.com/acerix/jisg#readme",
-  "repository": "git+https://github.com/acerix/jisg.git",
+  "repository": "https://github.com/acerix/jisg",
   "bugs": {
     "url": "https://github.com/acerix/jisg/issues"
   },
+  "license": "GPL-3.0",
   "keywords": [
     "integer",
     "sequence",
     "generator",
-    "OEIS"
+    "OEIS",
+    "math",
+    "bigint"
   ],
-  "scripts": {
-    "lint": "eslint src tests",
-    "clean": "rimraf dist/",
-    "build": "rimraf dist/ && rollup -c rollup.config.js src/index.js",
-    "test": "./node_modules/.bin/jest",
-    "check": "./node_modules/.bin/npm-check -u",
-    "example": "node example.js",
-    "prepare": "yarn clean && yarn lint && yarn test && yarn build",
-    "nppublish": "./node_modules/.bin/np || true"
+  "main": "./dist/tsc/main.js",
+  "types": "./dist/tsc/main.d.ts",
+  "browser": "./dist/esbuild/browser.js",
+  "bin": {
+    "jisg": "./dist/esbuild/cli.js"
   },
-  "dependencies": {
-    "is-prime": "*"
+  "scripts": {
+    "dev": "yarn test --watch",
+    "cli": "ts-node src/cli.ts",
+    "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
+    "test": "jest",
+    "example": "node example.js",
+    "clean": "rm -rf dist build package",
+    "ts-node": "ts-node",
+    "docs": "typedoc --entryPoints src/main.ts",
+    "build": "tsc -p tsconfig.json",
+    "build-all": "yarn build && yarn esbuild-node && yarn esbuild-browser",
+    "esbuild-browser": "esbuild src/browser.ts --bundle --minify --sourcemap=external --outfile=dist/esbuild/browser.js",
+    "esbuild-browser:dev": "esbuild src/browser.ts --bundle --outfile=dist/esbuild/browser.js",
+    "esbuild-browser:watch": "esbuild src/browser.ts --bundle --watch --outfile=dist/esbuild/browser.js",
+    "esbuild-node": "esbuild src/cli.ts --bundle --platform=node --minify --sourcemap=external --outfile=dist/esbuild/cli.js",
+    "esbuild-node:dev": "esbuild src/cli.ts --bundle --sourcemap=external --outfile=dist/esbuild/cli.js",
+    "esbuild-node:watch": "esbuild src/cli.ts --bundle --watch --sourcemap=external --outfile=dist/esbuild/cli.js",
+    "prepublish": "yarn lint && yarn test --coverage && yarn clean && yarn build-all && yarn docs"
   },
   "devDependencies": {
-    "@babel/cli": "*",
-    "@babel/core": "*",
-    "@babel/eslint-parser": "*",
-    "@babel/plugin-proposal-class-properties": "*",
-    "@babel/plugin-transform-runtime": "*",
-    "@babel/preset-env": "*",
-    "@rollup/plugin-babel": "*",
-    "@rollup/plugin-commonjs": "*",
-    "@rollup/plugin-node-resolve": "*",
-    "babel-minify": "*",
-    "caniuse-lite": "*",
+    "@types/jest": "*",
+    "@types/node": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "esbuild": "*",
     "eslint": "*",
-    "eslint-config-prettier": "*",
-    "eslint-plugin-import": "*",
-    "eslint-plugin-jsx-a11y": "*",
     "jest": "*",
-    "np": "*",
-    "npm-check": "*",
-    "rimraf": "*",
-    "rollup": "*",
-    "run-sequence": "*"
+    "ts-jest": "*",
+    "ts-node": "*",
+    "typedoc": "*",
+    "typescript": "*"
   },
-  "prettier": {
-    "singleQuote": true
+  "dependencies": {
+    "tslib": "*"
   }
 }

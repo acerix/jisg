@@ -1,0 +1,8 @@
+// Random integer
+export default function* randint(min?: number, max?: number): Generator<number> {
+  min = Math.ceil(min || 0)
+  max = Math.floor(max || Number.MAX_SAFE_INTEGER)
+  while (true) {
+    yield Math.floor(Math.random() * (max - min + 1)) + min
+  }
+}

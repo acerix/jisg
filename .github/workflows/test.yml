@@ -1,0 +1,27 @@
+#
+# Test and lint
+#
+name: Test
+
+on: [push, pull_request]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+      matrix:
+        nodejs: [16]
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.nodejs }}
+        cache: yarn
+
+    - run: yarn install
+    - run: yarn add -D esbuild
+    - run: yarn test --coverage
+    - run: yarn lint
+    - run: yarn build-all
