@@ -1,6 +1,6 @@
 {
   "name": "jisg",
-  "version": "0.4.2",
+  "version": "0.4.4",
   "license": "MIT",
   "type": "module",
   "engine": "node >= 14",
@@ -49,6 +49,7 @@
     "@rollup/plugin-commonjs": "*",
     "@rollup/plugin-node-resolve": "*",
     "babel-minify": "*",
+    "caniuse-lite": "*",
     "eslint": "*",
     "eslint-config-prettier": "*",
     "eslint-plugin-import": "*",

@@ -1,6 +1,18 @@
 // Hilbert's Hamiltonian walk on N X N projected onto x axis: m(3)
 export default function* A059252() {
-    for (const n of [0, 0, 1, 1, 2, 3, 3, 2, 2, 3, 3, 2, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 2, 2, 3, 3, 3, 2, 2, 3, 4, 5, 5, 4, 4, 4, 5, 5, 6, 6, 7, 7, 7, 6, 6, 7, 7, 7, 6, 6, 5, 4, 4, 5, 5, 4, 4, 5, 6, 6, 7, 7, 8, 9, 9, 8, 8, 8, 9, 9, 10, 10, 11, 11, 11, 10, 10, 11, 12, 12, 13, 13, 14, 15, 15, 14, 14, 15, 15, 14 ]) {
-        yield n
+    for (let t=0; true; t++) {
+        const n = Math.ceil(Math.log2(t+1)/2)
+        const s = [(n&1)===1, false]
+        const y = 0
+        for (let i=n-1; i!==-1; i--) {
+            const x = 1<<(i<<1)
+            const a = (t & (x<<1)) !== 0
+            const b = (t & x) !== 0
+            const d = a !== s[+!b]
+            if (d !== b) y |= 1<<i
+            s[0] = s[0] !== !(a||b)
+            s[1] = s[1] !== (a&&b)
+        }
+        yield y
     }
 }
