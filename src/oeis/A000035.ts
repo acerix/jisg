@@ -1,7 +1,7 @@
 // Parity of n
-export default function* A000035(): Generator<number> {
+export default function* A000035(): Generator<bigint> {
   for (;;) {
-    yield 0
-    yield 1
+    yield 0n
+    yield 1n
   }
 }
