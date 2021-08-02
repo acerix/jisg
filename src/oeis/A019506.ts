@@ -1,14 +1,14 @@
 // Hoax numbers
-import {is_prime} from '../utils'
-import {digit_sum, prime_factorization} from '../utils'
-export default function* A019506(): Generator<number> {
-  let n = 2
+import {isPrime} from '../utils'
+import {digitSum, primeFactorization} from '../utils'
+export default function* A019506(): Generator<bigint> {
+  let n = 2n
   for (;;) {
-    if (!is_prime(n)) {
-      const dsum = digit_sum(n)
-      let fsum = 0
-      for (const i of prime_factorization(n, false)) {
-        fsum += digit_sum(i)
+    if (!isPrime(n)) {
+      const dsum = digitSum(n)
+      let fsum = 0n
+      for (const i of primeFactorization(n, false)) {
+        fsum += digitSum(i)
       }
       if (dsum === fsum) {
         yield n

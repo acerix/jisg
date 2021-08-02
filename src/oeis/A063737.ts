@@ -1,9 +1,9 @@
 // Digit sum of n equals the sum of its prime factors
-import {digit_sum, prime_factorization} from '../utils'
-export default function* A063737(): Generator<number> {
-  let n = 2
+import {digitSum, primeFactorization} from '../utils'
+export default function* A063737(): Generator<bigint> {
+  let n = 2n
   for (;;) {
-    if (digit_sum(n) === prime_factorization(n, true).reduce((a, b) => a + b, 0)) {
+    if (digitSum(n) === primeFactorization(n, true).reduce((a, b) => a + b, 0n)) {
       yield n
     }
     n++

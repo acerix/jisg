@@ -1,46 +1,46 @@
 import {default as yield_prime} from './oeis/A000040'
 
-export function digit_sum(n: number): number {
-  return String(n).split('').map(Number).reduce((a, b) => a + b, 0)
+export function digitSum(n: bigint): bigint {
+  return String(n).split('').map(BigInt).reduce((a, b) => a + b, 0n)
 }
 
-export function digit_product(n: number): number {
-  return String(n).split('').map(Number).reduce((a, b) => a * b, 1)
+export function digitProduct(n: bigint): bigint {
+  return String(n).split('').map(BigInt).reduce((a, b) => a * b, 1n)
 }
 
-export function is_prime(n: number): boolean {
-  if (n === 1) return false
-  for (let i = 2; i*i <= n; i++) {
-    if (n%i === 0) return false
+export function isPrime(n: bigint): boolean {
+  if (n === 1n) return false
+  for (let i = 2n; i*i <= n; i++) {
+    if (n%i === 0n) return false
   }
   return true
 }
 
-export function prime_factorization(n: number, multiplicity=false): number[] {
-  if (is_prime(n)) {
+export function primeFactorization(n: bigint, multiplicity=false): bigint[] {
+  if (isPrime(n)) {
     return [n]
   }
   const result = []
   const primer = yield_prime()
   for (;;) {
-    const i = primer.next().value as number
+    const i = primer.next().value as bigint
     let appended = false
-    while (n % i === 0) {
+    while (n % i === 0n) {
       if (multiplicity || !appended) {
         result.push(i)
         appended = true
       }
       n /= i
     }
-    if (n === 1) {
+    if (n === 1n) {
       return result
     }
   }
 }
 
-function is_coprime(a: number, b: number): boolean {
-  const pfa = prime_factorization(a)
-  const pfb = prime_factorization(b)
+function isCoprime(a: bigint, b: bigint): boolean {
+  const pfa = primeFactorization(a)
+  const pfb = primeFactorization(b)
   for (const n of pfa) {
     if (pfb.indexOf(n) !== -1) {
       return false
@@ -49,34 +49,34 @@ function is_coprime(a: number, b: number): boolean {
   return true
 }
 
-export function euler_phi(n: number): number {
-  if (n < 2) {
+export function eulerPhi(n: bigint): bigint {
+  if (n < 2n) {
     return n
   }
-  let x = 0
-  for (let i=1; i<n; i++) {
-    if (is_coprime(n, i)) {
+  let x = 0n
+  for (let i=1n; i<n; i++) {
+    if (isCoprime(n, i)) {
       x++
     }
   }
   return x
 }
 
-export function factorial(n: number): number {
-  if (n === 0) {
-    return 1
+export function factorial(n: bigint): bigint {
+  if (n === 0n) {
+    return 1n
   }
-  for (let i=n-1; i>1; i--) {
+  for (let i=n-1n; i>1n; i--) {
     n *= i
   }
   return n
 }
 
-export function decimal_to_binary_digits(n: number): string {
+export function decimalToBinaryDigits(n: bigint): string {
   const r = []
-  while (n > 0) {
-    r.unshift(n % 2)
-    n = Math.floor(n / 2)
+  while (n > 0n) {
+    r.unshift(n % 2n)
+    n >>= 1n
   }
   return r.join('')
 }

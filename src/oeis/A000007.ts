@@ -1,7 +1,7 @@
 // The characteristic function of {0}: a(n) = 0^n.
-export default function* A000007(): Generator<number> {
-  yield 1
+export default function* A000007(): Generator<bigint> {
+  yield 1n
   for (;;) {
-    yield 0
+    yield 0n
   }
 }

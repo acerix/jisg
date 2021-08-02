@@ -1,9 +1,9 @@
 // Digital sum of n
-import {digit_sum} from '../utils'
-export default function* A007953(): Generator<number> {
-  let n = 0
+import {digitSum} from '../utils'
+export default function* A007953(): Generator<bigint> {
+  let n = 0n
   for (;;) {
-    yield digit_sum(n)
+    yield digitSum(n)
     n++
   }
 }

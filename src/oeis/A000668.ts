@@ -1,10 +1,10 @@
 // Mersenne primes
-import {is_prime} from '../utils'
+import {isPrime} from '../utils'
 import A000040 from './A000040'
-export default function* A000668(): Generator<number> {
+export default function* A000668(): Generator<bigint> {
   for (const n of A000040()) {
-    const x = Math.pow(2, n) - 1
-    if (is_prime(x)) {
+    const x = 2n**n - 1n
+    if (isPrime(x)) {
       yield x
     }
   }

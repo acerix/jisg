@@ -1,9 +1,9 @@
 // Product of decimal digits of n
-import {digit_product} from '../utils'
-export default function* A007954(): Generator<number> {
-  let n = 0
+import {digitProduct} from '../utils'
+export default function* A007954(): Generator<bigint> {
+  let n = 0n
   for (;;) {
-    yield digit_product(n)
+    yield digitProduct(n)
     n++
   }
 }
