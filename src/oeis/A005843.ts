@@ -1,8 +1,8 @@
-// The nonnegative even numbers
-export default function* A005843(): Generator<number> {
-  let n = 0
+// The non-negative even numbers
+export default function* A005843(): Generator<bigint> {
+  let n = 0n
   for (;;) {
     yield n
-    n += 2
+    n += 2n
   }
 }

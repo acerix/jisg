@@ -1,10 +1,10 @@
 // n is triangular
-export default function* A010054(): Generator<number> {
-  let n = 0
+export default function* A010054(): Generator<bigint> {
+  let n = 0n
   for (;;) {
-    yield 1
+    yield 1n
     for (let i=0; i<n; i++) {
-      yield 0
+      yield 0n
     }
     n++
   }

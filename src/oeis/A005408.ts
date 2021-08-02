@@ -1,8 +1,8 @@
 // The odd numbers
-export default function* A005408(): Generator<number> {
-  let n = 1
+export default function* A005408(): Generator<bigint> {
+  let n = 1n
   for (;;) {
     yield n
-    n += 2
+    n += 2n
   }
 }
