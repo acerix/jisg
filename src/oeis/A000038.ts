@@ -1,7 +1,7 @@
 // Twice A000007.
-export default function* A000038(): Generator<number> {
-  yield 2
+export default function* A000038(): Generator<bigint> {
+  yield 2n
   for (;;) {
-    yield 0
+    yield 0n
   }
 }
