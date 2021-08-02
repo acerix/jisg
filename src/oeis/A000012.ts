@@ -1,6 +1,6 @@
 // The one sequence
-export default function* A000012(): Generator<number> {
+export default function* A000012(): Generator<bigint> {
   for (;;) {
-    yield 1
+    yield 1n
   }
 }
