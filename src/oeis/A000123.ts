@@ -1,6 +1,6 @@
 // Number of binary partitions: number of partitions of 2n into powers of 2.
-export default function* A000123(): Generator<number> {
-  for (const n of [1, 2, 4, 6, 10, 14, 20, 26, 36, 46, 60, 74, 94, 114, 140, 166, 202, 238, 284, 330, 390, 450, 524, 598, 692, 786, 900, 1014, 1154, 1294, 1460, 1626, 1828, 2030, 2268, 2506, 2790, 3074, 3404, 3734, 4124, 4514, 4964, 5414, 5938, 6462, 7060, 7658, 8350, 9042, 9828, ]) {
+export default function* A000123(): Generator<bigint> {
+  for (const n of [1n, 2n, 4n, 6n, 10n, 14n, 20n, 26n, 36n, 46n, 60n, 74n, 94n, 114n, 140n, 166n, 202n, 238n, 284n, 330n, 390n, 450n, 524n, 598n, 692n, 786n, 900n, 1014n, 1154n, 1294n, 1460n, 1626n, 1828n, 2030n, 2268n, 2506n, 2790n, 3074n, 3404n, 3734n, 4124n, 4514n, 4964n, 5414n, 5938n, 6462n, 7060n, 7658n, 8350n, 9042n, 9828n, ]) {
     yield n
   }
 }

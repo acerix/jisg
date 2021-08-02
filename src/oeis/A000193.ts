@@ -1,6 +1,6 @@
 // Nearest integer to log n.
-export default function* A000193(): Generator<number> {
-  for (const n of [0, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, ]) {
+export default function* A000193(): Generator<bigint> {
+  for (const n of [0n, 1n, 1n, 1n, 2n, 2n, 2n, 2n, 2n, 2n, 2n, 2n, 3n, 3n, 3n, 3n, 3n, 3n, 3n, 3n, 3n, 3n, 3n, 3n, 3n, 3n, 3n, 3n, 3n, 3n, 3n, 3n, 3n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, 4n, ]) {
     yield n
   }
 }

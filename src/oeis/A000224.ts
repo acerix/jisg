@@ -1,6 +1,6 @@
 // Number of squares mod n.
-export default function* A000224(): Generator<number> {
-  for (const n of [1, 2, 2, 2, 3, 4, 4, 3, 4, 6, 6, 4, 7, 8, 6, 4, 9, 8, 10, 6, 8, 12, 12, 6, 11, 14, 11, 8, 15, 12, 16, 7, 12, 18, 12, 8, 19, 20, 14, 9, 21, 16, 22, 12, 12, 24, 24, 8, 22, 22, 18, 14, 27, 22, 18, 12, 20, 30, 30, 12, 31, 32, 16, 12, 21, 24, 34, 18, 24, 24, 36, 12, ]) {
+export default function* A000224(): Generator<bigint> {
+  for (const n of [1n, 2n, 2n, 2n, 3n, 4n, 4n, 3n, 4n, 6n, 6n, 4n, 7n, 8n, 6n, 4n, 9n, 8n, 10n, 6n, 8n, 12n, 12n, 6n, 11n, 14n, 11n, 8n, 15n, 12n, 16n, 7n, 12n, 18n, 12n, 8n, 19n, 20n, 14n, 9n, 21n, 16n, 22n, 12n, 12n, 24n, 24n, 8n, 22n, 22n, 18n, 14n, 27n, 22n, 18n, 12n, 20n, 30n, 30n, 12n, 31n, 32n, 16n, 12n, 21n, 24n, 34n, 18n, 24n, 24n, 36n, 12n, ]) {
     yield n
   }
 }

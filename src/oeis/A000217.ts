@@ -1,6 +1,6 @@
 // Triangular numbers
-export default function* A000217(): Generator<number> {
-  let n = 0, sum = 0
+export default function* A000217(): Generator<bigint> {
+  let n = 0n, sum = 0n
   for (;;) {
     sum += n
     yield sum

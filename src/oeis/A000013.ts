@@ -1,6 +1,6 @@
 // Number of n-bead binary necklaces with beads of 2 colors where the colors may be swapped but turning over is not allowed
-export default function* A000013(): Generator<number> {
-  for (const n of [1, 1, 2, 2, 4, 4, 8, 10, 20, 30, 56, 94, 180, 316, 596, 1096, 2068, 3856, 7316, 13798, 26272, 49940, 95420, 182362, 349716, 671092, 1290872, 2485534, 4794088, 9256396, 17896832, 34636834, 67110932, 130150588, 252648992, 490853416, ]) {
+export default function* A000013(): Generator<bigint> {
+  for (const n of [1n, 1n, 2n, 2n, 4n, 4n, 8n, 10n, 20n, 30n, 56n, 94n, 180n, 316n, 596n, 1096n, 2068n, 3856n, 7316n, 13798n, 26272n, 49940n, 95420n, 182362n, 349716n, 671092n, 1290872n, 2485534n, 4794088n, 9256396n, 17896832n, 34636834n, 67110932n, 130150588n, 252648992n, 490853416n, ]) {
     yield n
   }
 }

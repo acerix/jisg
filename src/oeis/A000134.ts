@@ -1,6 +1,6 @@
 // Positive zeros of Bessel function of order 0 rounded to nearest integer.
-export default function* A000134(): Generator<number> {
-  for (const n of [2, 6, 9, 12, 15, 18, 21, 24, 27, 31, 34, 37, 40, 43, 46, 49, 53, 56, 59, 62, 65, 68, 71, 75, 78, 81, 84, 87, 90, 93, 97, 100, 103, 106, 109, 112, 115, 119, 122, 125, 128, 131, 134, 137, 141, 144, 147, 150, 153, 156, 159, 163, 166, 169, 172, 175, 178, 181, 185, 188, ]) {
+export default function* A000134(): Generator<bigint> {
+  for (const n of [2n, 6n, 9n, 12n, 15n, 18n, 21n, 24n, 27n, 31n, 34n, 37n, 40n, 43n, 46n, 49n, 53n, 56n, 59n, 62n, 65n, 68n, 71n, 75n, 78n, 81n, 84n, 87n, 90n, 93n, 97n, 100n, 103n, 106n, 109n, 112n, 115n, 119n, 122n, 125n, 128n, 131n, 134n, 137n, 141n, 144n, 147n, 150n, 153n, 156n, 159n, 163n, 166n, 169n, 172n, 175n, 178n, 181n, 185n, 188n, ]) {
     yield n
   }
 }

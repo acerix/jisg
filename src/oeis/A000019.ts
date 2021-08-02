@@ -1,6 +1,6 @@
 // Number of primitive permutation groups of degree n.
-export default function* A000019(): Generator<number> {
-  for (const n of [1, 1, 2, 2, 5, 4, 7, 7, 11, 9, 8, 6, 9, 4, 6, 22, 10, 4, 8, 4, 9, 4, 7, 5, 28, 7, 15, 14, 8, 4, 12, 7, 4, 2, 6, 22, 11, 4, 2, 8, 10, 4, 10, 4, 9, 2, 6, 4, 40, 9, 2, 3, 8, 4, 8, 9, 5, 2, 6, 9, 14, 4, 8, 74, 13, 7, 10, 7, 2, 2, 10, 4, 16, 4, 2, 2, 4, 6, 10, 4, 155, 10, 6, 6, 6, 2, 2, 2, 10, 4, 10, 2, ]) {
+export default function* A000019(): Generator<bigint> {
+  for (const n of [1n, 1n, 2n, 2n, 5n, 4n, 7n, 7n, 11n, 9n, 8n, 6n, 9n, 4n, 6n, 22n, 10n, 4n, 8n, 4n, 9n, 4n, 7n, 5n, 28n, 7n, 15n, 14n, 8n, 4n, 12n, 7n, 4n, 2n, 6n, 22n, 11n, 4n, 2n, 8n, 10n, 4n, 10n, 4n, 9n, 2n, 6n, 4n, 40n, 9n, 2n, 3n, 8n, 4n, 8n, 9n, 5n, 2n, 6n, 9n, 14n, 4n, 8n, 74n, 13n, 7n, 10n, 7n, 2n, 2n, 10n, 4n, 16n, 4n, 2n, 2n, 4n, 6n, 10n, 4n, 155n, 10n, 6n, 6n, 6n, 2n, 2n, 2n, 10n, 4n, 10n, 2n, ]) {
     yield n
   }
 }

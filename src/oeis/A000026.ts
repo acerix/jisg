@@ -1,6 +1,6 @@
 // Mosaic numbers or multiplicative projection of n: if n = Product (p_j^k_j) then a(n) = Product (p_j * k_j).
-export default function* A000026(): Generator<number> {
-  for (const n of [1, 2, 3, 4, 5, 6, 7, 6, 6, 10, 11, 12, 13, 14, 15, 8, 17, 12, 19, 20, 21, 22, 23, 18, 10, 26, 9, 28, 29, 30, 31, 10, 33, 34, 35, 24, 37, 38, 39, 30, 41, 42, 43, 44, 30, 46, 47, 24, 14, 20, 51, 52, 53, 18, 55, 42, 57, 58, 59, 60, 61, 62, 42, 12, 65, 66, 67, 68, 69, 70, 71, 36, ]) {
+export default function* A000026(): Generator<bigint> {
+  for (const n of [1n, 2n, 3n, 4n, 5n, 6n, 7n, 6n, 6n, 10n, 11n, 12n, 13n, 14n, 15n, 8n, 17n, 12n, 19n, 20n, 21n, 22n, 23n, 18n, 10n, 26n, 9n, 28n, 29n, 30n, 31n, 10n, 33n, 34n, 35n, 24n, 37n, 38n, 39n, 30n, 41n, 42n, 43n, 44n, 30n, 46n, 47n, 24n, 14n, 20n, 51n, 52n, 53n, 18n, 55n, 42n, 57n, 58n, 59n, 60n, 61n, 62n, 42n, 12n, 65n, 66n, 67n, 68n, 69n, 70n, 71n, 36n, ]) {
     yield n
   }
 }

@@ -1,9 +1,9 @@
 // Catalan numbers
 import {factorial} from '../utils'
-export default function* A000108(): Generator<number> {
+export default function* A000108(): Generator<bigint> {
   let n = 0n
   for (;;) {
-    yield Number(factorial(2n*n)) / Number(factorial(n+1n)) / Number(factorial(n))
+    yield factorial(2n*n) / factorial(n+1n) / factorial(n)
     n++
   }
 }

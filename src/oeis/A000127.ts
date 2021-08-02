@@ -1,6 +1,6 @@
 // Maximal number of regions obtained by joining n points around a circle by straight lines. Also number of regions in 4-space formed by n-1 hyperplanes.
-export default function* A000127(): Generator<number> {
-  for (const n of [1, 2, 4, 8, 16, 31, 57, 99, 163, 256, 386, 562, 794, 1093, 1471, 1941, 2517, 3214, 4048, 5036, 6196, 7547, 9109, 10903, 12951, 15276, 17902, 20854, 24158, 27841, 31931, 36457, 41449, 46938, 52956, 59536, 66712, 74519, 82993, 92171, 102091, 112792, 124314, 136698, ]) {
+export default function* A000127(): Generator<bigint> {
+  for (const n of [1n, 2n, 4n, 8n, 16n, 31n, 57n, 99n, 163n, 256n, 386n, 562n, 794n, 1093n, 1471n, 1941n, 2517n, 3214n, 4048n, 5036n, 6196n, 7547n, 9109n, 10903n, 12951n, 15276n, 17902n, 20854n, 24158n, 27841n, 31931n, 36457n, 41449n, 46938n, 52956n, 59536n, 66712n, 74519n, 82993n, 92171n, 102091n, 112792n, 124314n, 136698n, ]) {
     yield n
   }
 }

@@ -1,8 +1,8 @@
 // Square pyramidal numbers
-export default function* A000330(): Generator<number> {
-  let n = 0, sum = 0
+export default function* A000330(): Generator<bigint> {
+  let n = 0n, sum = 0n
   for (;;) {
-    sum += Math.pow(n, 2)
+    sum += n**2n
     yield sum
     n++
   }

@@ -1,6 +1,6 @@
-// Record gaps between primes (upper end) (compare A002386, which gives lower ends of these gaps).
-export default function* A000101(): Generator<number> {
-  for (const n of [3, 5, 11, 29, 97, 127, 541, 907, 1151, 1361, 9587, 15727, 19661, 31469, 156007, 360749, 370373, 492227, 1349651, 1357333, 2010881, 4652507, 17051887, 20831533, 47326913, 122164969, 189695893, 191913031, 387096383, 436273291, 1294268779, ]) {
+// Record gaps between primes (upper end) (compare A002386n, which gives lower ends of these gaps).
+export default function* A000101(): Generator<bigint> {
+  for (const n of [3n, 5n, 11n, 29n, 97n, 127n, 541n, 907n, 1151n, 1361n, 9587n, 15727n, 19661n, 31469n, 156007n, 360749n, 370373n, 492227n, 1349651n, 1357333n, 2010881n, 4652507n, 17051887n, 20831533n, 47326913n, 122164969n, 189695893n, 191913031n, 387096383n, 436273291n, 1294268779n, ]) {
     yield n
   }
 }

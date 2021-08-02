@@ -1,6 +1,6 @@
 // Number of hexagonal polyominoes (or hexagonal polyforms, or planar polyhexes) with n cells.
-export default function* A000228(): Generator<number> {
-  for (const n of [1, 1, 3, 7, 22, 82, 333, 1448, 6572, 30490, 143552, 683101, 3274826, 15796897, 76581875, 372868101, 1822236628, 8934910362, 43939164263, 216651036012, 1070793308942, ]) {
+export default function* A000228(): Generator<bigint> {
+  for (const n of [1n, 1n, 3n, 7n, 22n, 82n, 333n, 1448n, 6572n, 30490n, 143552n, 683101n, 3274826n, 15796897n, 76581875n, 372868101n, 1822236628n, 8934910362n, 43939164263n, 216651036012n, 1070793308942n, ]) {
     yield n
   }
 }

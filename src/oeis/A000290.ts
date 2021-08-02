@@ -1,8 +1,8 @@
 // The squares
-export default function* A000290(): Generator<number> {
-  let n = 0
+export default function* A000290(): Generator<bigint> {
+  let n = 0n
   for (;;) {
-    yield Math.pow(n, 2)
+    yield n**2n
     n++
   }
 }

@@ -1,6 +1,6 @@
 // Local stops on New York City A line subway.
-export default function* A000054(): Generator<number> {
-  for (const n of [4, 14, 23, 34, 42, 50, 59, 72, 81, 86, 96, 103, 110, 116, 125, 135, 145, 155, 163, 168, 175, 181, 190, 200, 207, ]) {
+export default function* A000054(): Generator<bigint> {
+  for (const n of [4n, 14n, 23n, 34n, 42n, 50n, 59n, 72n, 81n, 86n, 96n, 103n, 110n, 116n, 125n, 135n, 145n, 155n, 163n, 168n, 175n, 181n, 190n, 200n, 207n, ]) {
     yield n
   }
 }

@@ -1,6 +1,6 @@
 // Local stops on New York City Broadway line (IRT #1) subway.
-export default function* A000053(): Generator<number> {
-  for (const n of [14, 18, 23, 28, 34, 42, 50, 59, 66, 72, 79, 86, 96, 103, 110, 116, 125, 137, 145, 157, 168, 181, 191, 207, 215, 225, 231, 238, 242, ]) {
+export default function* A000053(): Generator<bigint> {
+  for (const n of [14n, 18n, 23n, 28n, 34n, 42n, 50n, 59n, 66n, 72n, 79n, 86n, 96n, 103n, 110n, 116n, 125n, 137n, 145n, 157n, 168n, 181n, 191n, 207n, 215n, 225n, 231n, 238n, 242n, ]) {
     yield n
   }
 }

@@ -1,6 +1,6 @@
 // Number of cusps of principal congruence subgroup GAMMA^{hat}(n).
-export default function* A000114(): Generator<number> {
-  for (const n of [3, 4, 6, 12, 12, 24, 24, 36, 36, 60, 48, 84, 72, 96, 96, 144, 108, 180, 144, 192, 180, 264, 192, 300, 252, 324, 288, 420, 288, 480, 384, 480, 432, 576, 432, 684, 540, 672, 576, 840, 576, 924, 720, 864, 792, 1104, 768, 1176, 900, 1152, 1008, 1404, 972, 1440, ]) {
+export default function* A000114(): Generator<bigint> {
+  for (const n of [3n, 4n, 6n, 12n, 12n, 24n, 24n, 36n, 36n, 60n, 48n, 84n, 72n, 96n, 96n, 144n, 108n, 180n, 144n, 192n, 180n, 264n, 192n, 300n, 252n, 324n, 288n, 420n, 288n, 480n, 384n, 480n, 432n, 576n, 432n, 684n, 540n, 672n, 576n, 840n, 576n, 924n, 720n, 864n, 792n, 1104n, 768n, 1176n, 900n, 1152n, 1008n, 1404n, 972n, 1440n, ]) {
     yield n
   }
 }

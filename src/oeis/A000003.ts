@@ -1,6 +1,6 @@
 // Number of classes of primitive positive definite binary quadratic forms of discriminant D = -4n
-export default function* A000003(): Generator<number> {
-  for (const n of [1, 1, 1, 1, 2, 2, 1, 2, 2, 2, 3, 2, 2, 4, 2, 2, 4, 2, 3, 4, 4, 2, 3, 4, 2, 6, 3, 2, 6, 4, 3, 4, 4, 4, 6, 4, 2, 6, 4, 4, 8, 4, 3, 6, 4, 4, 5, 4, 4, 6, 6, 4, 6, 6, 4, 8, 4, 2, 9, 4, 6, 8, 4, 4, 8, 8, 3, 8, 8, 4, 7, 4, 4, 10, 6, 6, 8, 4, 5, 8, 6, 4, 9, 8, 4, 10, 6, 4, 12, 8, 6, 6, 4, 8, 8, 8, 4, 8, 6, 4, ]) {
+export default function* A000003(): Generator<bigint> {
+  for (const n of [1n, 1n, 1n, 1n, 2n, 2n, 1n, 2n, 2n, 2n, 3n, 2n, 2n, 4n, 2n, 2n, 4n, 2n, 3n, 4n, 4n, 2n, 3n, 4n, 2n, 6n, 3n, 2n, 6n, 4n, 3n, 4n, 4n, 4n, 6n, 4n, 2n, 6n, 4n, 4n, 8n, 4n, 3n, 6n, 4n, 4n, 5n, 4n, 4n, 6n, 6n, 4n, 6n, 6n, 4n, 8n, 4n, 2n, 9n, 4n, 6n, 8n, 4n, 4n, 8n, 8n, 3n, 8n, 8n, 4n, 7n, 4n, 4n, 10n, 6n, 6n, 8n, 4n, 5n, 8n, 6n, 4n, 9n, 8n, 4n, 10n, 6n, 4n, 12n, 8n, 6n, 6n, 4n, 8n, 8n, 8n, 4n, 8n, 6n, 4n, ]) {
     yield n
   }
 }

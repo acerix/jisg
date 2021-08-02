@@ -1,8 +1,8 @@
 // The cubes: a(n) = n^3.
-export default function* A000578(): Generator<number> {
-  let n = 0
+export default function* A000578(): Generator<bigint> {
+  let n = 0n
   for (;;) {
-    yield Math.pow(n, 3)
+    yield n**3n
     n++
   }
 }

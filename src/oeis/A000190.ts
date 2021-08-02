@@ -1,6 +1,6 @@
 // Number of solutions to x^4 == 0 (mod n).
-export default function* A000190(): Generator<number> {
-  for (const n of [1, 1, 1, 2, 1, 1, 1, 4, 3, 1, 1, 2, 1, 1, 1, 8, 1, 3, 1, 2, 1, 1, 1, 4, 5, 1, 9, 2, 1, 1, 1, 8, 1, 1, 1, 6, 1, 1, 1, 4, 1, 1, 1, 2, 3, 1, 1, 8, 7, 5, 1, 2, 1, 9, 1, 4, 1, 1, 1, 2, 1, 1, 3, 16, 1, 1, 1, 2, 1, 1, 1, 12, 1, 1, 5, 2, 1, 1, 1, 8, 27, 1, 1, 2, 1, 1, 1, 4, 1, 3, ]) {
+export default function* A000190(): Generator<bigint> {
+  for (const n of [1n, 1n, 1n, 2n, 1n, 1n, 1n, 4n, 3n, 1n, 1n, 2n, 1n, 1n, 1n, 8n, 1n, 3n, 1n, 2n, 1n, 1n, 1n, 4n, 5n, 1n, 9n, 2n, 1n, 1n, 1n, 8n, 1n, 1n, 1n, 6n, 1n, 1n, 1n, 4n, 1n, 1n, 1n, 2n, 3n, 1n, 1n, 8n, 7n, 5n, 1n, 2n, 1n, 9n, 1n, 4n, 1n, 1n, 1n, 2n, 1n, 1n, 3n, 16n, 1n, 1n, 1n, 2n, 1n, 1n, 1n, 12n, 1n, 1n, 5n, 2n, 1n, 1n, 1n, 8n, 27n, 1n, 1n, 2n, 1n, 1n, 1n, 4n, 1n, 3n, ]) {
     yield n
   }
 }

@@ -1,6 +1,6 @@
 // Lower Wythoff sequence (a Beatty sequence): a(n) = floor(n*phi), where phi = (1+sqrt(5))/2 = A001622.
-export default function* A000201(): Generator<number> {
-  for (const n of [1, 3, 4, 6, 8, 9, 11, 12, 14, 16, 17, 19, 21, 22, 24, 25, 27, 29, 30, 32, 33, 35, 37, 38, 40, 42, 43, 45, 46, 48, 50, 51, 53, 55, 56, 58, 59, 61, 63, 64, 66, 67, 69, 71, 72, 74, 76, 77, 79, 80, 82, 84, 85, 87, 88, 90, 92, 93, 95, 97, 98, 100, 101, 103, 105, 106, 108, 110, ]) {
+export default function* A000201(): Generator<bigint> {
+  for (const n of [1n, 3n, 4n, 6n, 8n, 9n, 11n, 12n, 14n, 16n, 17n, 19n, 21n, 22n, 24n, 25n, 27n, 29n, 30n, 32n, 33n, 35n, 37n, 38n, 40n, 42n, 43n, 45n, 46n, 48n, 50n, 51n, 53n, 55n, 56n, 58n, 59n, 61n, 63n, 64n, 66n, 67n, 69n, 71n, 72n, 74n, 76n, 77n, 79n, 80n, 82n, 84n, 85n, 87n, 88n, 90n, 92n, 93n, 95n, 97n, 98n, 100n, 101n, 103n, 105n, 106n, 108n, 110n, ]) {
     yield n
   }
 }

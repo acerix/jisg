@@ -1,6 +1,6 @@
 // Number of groups of order n
-export default function* A000001(): Generator<number> {
-  for (const n of [0, 1, 1, 1, 2, 1, 2, 1, 5, 2, 2, 1, 5, 1, 2, 1, 14, 1, 5, 1, 5, 2, 2, 1, 15, 2, 2, 5, 4, 1, 4, 1, 51, 1, 2, 1, 14, 1, 2, 2, 14, 1, 6, 1, 4, 2, 2, 1, 52, 2, 5, 1, 5, 1, 15, 2, 13, 2, 2, 1, 13, 1, 2, 4, 267, 1, 4, 1, 5, 1, 4, 1, 50, 1, 2, 3, 4, 1, 6, 1, 52, 15, 2, 1, 15, 1, 2, 1, 12, 1, 10, 1, 4, 2, ]) {
+export default function* A000001(): Generator<bigint> {
+  for (const n of [0n, 1n, 1n, 1n, 2n, 1n, 2n, 1n, 5n, 2n, 2n, 1n, 5n, 1n, 2n, 1n, 14n, 1n, 5n, 1n, 5n, 2n, 2n, 1n, 15n, 2n, 2n, 5n, 4n, 1n, 4n, 1n, 51n, 1n, 2n, 1n, 14n, 1n, 2n, 2n, 14n, 1n, 6n, 1n, 4n, 2n, 2n, 1n, 52n, 2n, 5n, 1n, 5n, 1n, 15n, 2n, 13n, 2n, 2n, 1n, 13n, 1n, 2n, 4n, 267n, 1n, 4n, 1n, 5n, 1n, 4n, 1n, 50n, 1n, 2n, 3n, 4n, 1n, 6n, 1n, 52n, 15n, 2n, 1n, 15n, 1n, 2n, 1n, 12n, 1n, 10n, 1n, 4n, 2n, ]) {
     yield n
   }
 }

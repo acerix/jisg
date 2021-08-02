@@ -1,6 +1,6 @@
 // Nearest integer to tan n.
-export default function* A000209(): Generator<number> {
-  for (const n of [0, 2, -2, 0, 1, -3, 0, 1, -7, 0, 1, -226, -1, 0, 7, -1, 0, 3, -1, 0, 2, -2, 0, 2, -2, 0, 1, -3, 0, 1, -6, 0, 1, -75, -1, 0, 8, -1, 0, 4, -1, 0, 2, -1, 0, 2, -2, 0, 1, -3, 0, 1, -6, 0, 1, -45, -1, 0, 8, -1, 0, 4, -1, 0, 2, -1, 0, 2, -2, 0, 1, -3, 0, 1, -6, 0, 1, -32, -1, 0, 9, -1, ]) {
+export default function* A000209(): Generator<bigint> {
+  for (const n of [0n, 2n, -2n, 0n, 1n, -3n, 0n, 1n, -7n, 0n, 1n, -226n, -1n, 0n, 7n, -1n, 0n, 3n, -1n, 0n, 2n, -2n, 0n, 2n, -2n, 0n, 1n, -3n, 0n, 1n, -6n, 0n, 1n, -75n, -1n, 0n, 8n, -1n, 0n, 4n, -1n, 0n, 2n, -1n, 0n, 2n, -2n, 0n, 1n, -3n, 0n, 1n, -6n, 0n, 1n, -45n, -1n, 0n, 8n, -1n, 0n, 4n, -1n, 0n, 2n, -1n, 0n, 2n, -2n, 0n, 1n, -3n, 0n, 1n, -6n, 0n, 1n, -32n, -1n, 0n, 9n, -1n, ]) {
     yield n
   }
 }
