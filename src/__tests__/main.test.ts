@@ -1,8 +1,8 @@
 import * as jisg from '../main'
 
-function slice_generator(generator: Generator<number>, start: 0n, end: number=Number.MAX_SAFE_INTEGER): number[] {
+function slice_generator(generator: Generator<bigint>, start: bigint, end: bigint): bigint[] {
   let i = 0
-  const r: number[] = []
+  const r: bigint[] = []
   while (i++<start) {
     generator.next()
   }
@@ -305,8 +305,9 @@ describe('test beginning of sequences', () => {
   }
   for (const [id, samples] of Object.entries(OEIS_START_SAMPLES)) {
     test(id, () => {
-      const generator = eval(`jisg[${'id'}]()`) as Generator<number>
-      expect(slice_generator(generator, 0n, samples.length)).toEqual(samples)
+      // @todo there must be something better than eval
+      const generator = eval(`jisg[${'id'}]()`) as Generator<bigint>
+      expect(slice_generator(generator, 0n, BigInt(samples.length))).toEqual(samples)
     })
   }
 })
