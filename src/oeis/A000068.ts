@@ -1,4 +1,4 @@
-import { isPrime } from "../utils";
+import { isPrime } from "../utils"
 
 // Numbers n such that n^4 + 1 is prime.
 export default function* A000068(): Generator<bigint> {
