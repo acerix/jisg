@@ -5,7 +5,7 @@ export default function* A000005(): Generator<bigint> {
   for (;;) {
     let c = 2n
     for (let i=2n; i<n; i++) {
-      if (n % i === 0n) {
+      if (n%i === 0n) {
         c++
       }
     }
