@@ -1,8 +1,8 @@
 // Unary representation of natural numbers
 export default function* A000042(): Generator<bigint> {
-  let s = ''
+  let t = 0n
   for (;;) {
-    s += '1'
-    yield BigInt(s)
+    t = 10n * t + 1n
+    yield t
   }
 }
