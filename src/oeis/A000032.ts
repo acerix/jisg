@@ -1,4 +1,4 @@
-// Lucas numbers beginning at 2: L(n) = L(n-1) + L(n-2), L(0) = 2n, L(1) = 1.
+// Lucas numbers beginning at 2: L(n) = L(n-1) + L(n-2), L(0) = 2, L(1) = 1.
 export default function* A000032(): Generator<bigint> {
   let previous = 2n, current = 1n
   yield previous
