@@ -108,7 +108,6 @@ setInterval(
 [coverage-url]: https://scrutinizer-ci.com/g/acerix/jisg/?branch=main
 [scrutinizer-image]: https://scrutinizer-ci.com/g/acerix/jisg/badges/quality-score.png?b=main
 [scrutinizer-url]: https://scrutinizer-ci.com/g/acerix/jisg/?branch=main
-[lgtm-image]: https://img.shields.io/lgtm/alerts/github/acerix/jisg
+[lgtm-image]: https://img.shields.io/lgtm/alerts/g/acerix/jisg.svg
 [lgtm-url]: https://lgtm.com/projects/g/acerix/jisg/
 [license-image]: https://img.shields.io/npm/l/jisg.svg
-
