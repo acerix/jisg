@@ -39,7 +39,7 @@
     "clean": "rm -rf dist build package",
     "ts-node": "ts-node",
     "docs": "typedoc --entryPoints src/main.ts",
-    "xprebuild": "echo -e \"export default '`node -p \\\"require('./package.json').version\\\"`'\" > src/version.ts",
+    "prebuild-x": "echo -e \"export default '`node -p \"require('./package.json').version\"`'\" > src/version.ts",
     "build": "tsc -p tsconfig.json",
     "build-all": "yarn build && yarn esbuild-node && yarn esbuild-browser",
     "esbuild-browser": "esbuild src/browser.ts --bundle --minify --sourcemap=external --outfile=dist/esbuild/browser.js",
