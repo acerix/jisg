@@ -1,6 +1,6 @@
 {
   "name": "jisg",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "description": "Implementations of select OEIS integer sequences in JavaScript.",
   "author": "Dylan Ferris <dylan@psilly.com>",
   "contributors": [

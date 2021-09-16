@@ -1,6 +1,5 @@
-import {isPrime, digitSum, primeFactorization} from '../utils'
-
 // Hoax numbers
+import {isPrime, digitSum, primeFactorization} from '../utils'
 export default function* A019506(): Generator<bigint> {
   let n = 2n
   for (;;) {
