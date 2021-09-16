@@ -273,6 +273,7 @@ export {default as A002024} from './oeis/A002024'
 export {default as A003238} from './oeis/A003238'
 export {default as A005150} from './oeis/A005150'
 export {default as A005408} from './oeis/A005408'
+export {default as A005479} from './oeis/A005479'
 export {default as A005843} from './oeis/A005843'
 export {default as A006530} from './oeis/A006530'
 export {default as A006753} from './oeis/A006753'
@@ -288,5 +289,5 @@ export {default as A123456} from './oeis/A123456'
 export {default as A134816} from './oeis/A134816'
 export {default as randint} from './extra/randint'
 
+export {default as version} from './version'
 export default {}
-

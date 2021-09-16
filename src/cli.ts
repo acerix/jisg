@@ -1,3 +1,2 @@
-#!/usr/bin/env node
-
-console.log(`jisg ${process.argv.join(' ')}`)
+import jisg = require('./main')
+console.log(`jisg v${jisg.version}`)

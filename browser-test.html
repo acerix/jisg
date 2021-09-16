@@ -7,16 +7,20 @@
     <script src="./dist/esbuild/browser.js"></script>
   </head>
   <body>
+    <h1>JISG Browser Test</h1>
+    <p><em>jisg v<script>document.write(jisg.version)</script></em></p>
 
-<h1>Browser Test</h1>
-<p><em>jisg</em></p>
-
-<h2>JISG</h2>
-
-<h3>Generate</h3>
-<pre><script>
-console.log(jisg)
-</script></pre>
+    <pre id="out" style="white-space: pre-wrap;">A000045: </pre>
+    <script>
+      const out = document.getElementById('out')
+      const generator = jisg.A000045()
+      setInterval(
+        function() {
+          out.innerText += generator.next().value + ', '
+        },
+        666
+      )
+    </script>
 
   </body>
 </html>
