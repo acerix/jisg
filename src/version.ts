@@ -1,2 +1,1 @@
-const VERSION = '0.5.5'
-export default VERSION
+export default '0.5.6'
