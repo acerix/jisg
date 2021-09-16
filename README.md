@@ -39,10 +39,19 @@ for (let i of A000045()) {
 ### Script Tags
 
 ```html
-<script src="//unpkg.com/jisg"></script>
-```
-```js
-document.write(A000045().slice(0, 10))
+<script src="https://unpkg.com/jisg"></script>
+<script>
+const generator = jisg.A000045()
+setInterval(
+  () => {
+    document.write(
+      generator.next().value,
+      ', '
+    )
+  },
+  666
+)
+</script>
 ```
 
 [CodePen Demo](https://codepen.io/acerix/pen/MWmXbrO?editors=0010)
