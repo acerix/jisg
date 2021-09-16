@@ -3,8 +3,10 @@
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
 [![Build Status][build-image]][build-url]
+[![Build Size][size-image]][size-url]
 [![Code Coverage][coverage-image]][coverage-url]
 [![Scrutinizer Code Quality][scrutinizer-image]][scrutinizer-url]
+[![Language Grade][lgtm-image]][lgtm-url]
 [![GPL 3.0][license-image]](LICENSE)
 
 Implementations of select [OEIS](http://oeis.org/) integer sequences in JavaScript, portially inspired by [intseq](https://github.com/nicross/intseq).
@@ -88,9 +90,13 @@ setInterval(
 [downloads-url]: https://npmjs.org/package/jisg
 [build-image]: https://github.com/acerix/jisg/workflows/Test/badge.svg
 [build-url]: https://github.com/acerix/jisg/actions?query=workflow%2ATest
+[size-image]: https://badgen.net/bundlephobia/min/jisg
+[size-url]: https://bundlephobia.com/result?p=jisg
 [coverage-image]: https://scrutinizer-ci.com/g/acerix/jisg/badges/coverage.png?b=main
 [coverage-url]: https://scrutinizer-ci.com/g/acerix/jisg/?branch=main
 [scrutinizer-image]: https://scrutinizer-ci.com/g/acerix/jisg/badges/quality-score.png?b=main
 [scrutinizer-url]: https://scrutinizer-ci.com/g/acerix/jisg/?branch=main
+[lgtm-image]: https://img.shields.io/lgtm/alerts/github/acerix/jisg
+[lgtm-url]: https://lgtm.com/projects/g/acerix/jisg/
 [license-image]: https://img.shields.io/npm/l/jisg.svg
 
