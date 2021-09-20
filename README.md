@@ -111,3 +111,4 @@ setInterval(
 [lgtm-image]: https://img.shields.io/lgtm/alerts/g/acerix/jisg.svg
 [lgtm-url]: https://lgtm.com/projects/g/acerix/jisg/
 [license-image]: https://img.shields.io/npm/l/jisg.svg
+
