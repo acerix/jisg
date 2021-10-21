@@ -1,6 +1,6 @@
 import * as jisg from '../main'
 
-function slice_generator(generator: Generator<bigint>, start: bigint, end: bigint): bigint[] {
+function sliceGenerator(generator: Generator<bigint>, start: bigint, end: bigint): bigint[] {
   let i = 0
   const r: bigint[] = []
   while (i++<start) {
@@ -308,7 +308,7 @@ describe('test beginning of sequences', () => {
     test(id, () => {
       // @todo there must be something better than eval
       const generator = eval(`jisg[${'id'}]()`) as Generator<bigint>
-      expect(slice_generator(generator, 0n, BigInt(samples.length))).toEqual(samples)
+      expect(sliceGenerator(generator, 0n, BigInt(samples.length))).toEqual(samples)
     })
   }
 })
