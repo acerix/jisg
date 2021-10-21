@@ -7,7 +7,7 @@ function sliceGenerator(generator: Generator<bigint>, start: bigint, end: bigint
     generator.next()
   }
   while (i++<=end) {
-    r.push(generator.next().value)
+    r.push(generator.next().value as bigint)
   }
   return r
 }
