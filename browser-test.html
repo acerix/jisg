@@ -11,19 +11,17 @@
     <p><em>jisg v<span id="version">0.0.0</span></em></p>
     <pre id="out" style="white-space: pre-wrap;">A000045: </pre>
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('version').innerText = jisg.version
-  const out = document.getElementById('out')
-  const generator = jisg.A000045()
-
-  setInterval(
-    function() {
-      out.innerText += generator.next().value + ', '
-    },
-    666
-  )
-
-})
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('version').innerText = jisg.version
+        const out = document.getElementById('out')
+        const generator = jisg.A000045()
+        setInterval(
+          function() {
+            out.innerText += generator.next().value + ', '
+          },
+          17
+        )
+      })
     </script>
   </body>
 </html>
