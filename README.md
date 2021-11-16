@@ -33,7 +33,7 @@ for (let i=0; i<43; i++) {
 
 ```js
 const {A000045} = require('jisg')
-for (let i of A000045()) {
+for (const i of A000045()) {
   console.log(i)
 }
 ```
