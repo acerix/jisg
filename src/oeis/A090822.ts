@@ -1,7 +1,8 @@
 // Gijswijt's sequence: a(1) = 1; for n>1, a(n) = largest integer k such that the word a(1)a(2)...a(n-1) is of the form xy^k for words x and y (where y has positive length), i.e., the maximal number of repeating blocks at the end of the sequence so far.
 export default function* A090822(): Generator<bigint> {
   // initial block and glue sequences
-  let b = [1n], s = [2n]
+  let b = [1n],
+    s = [2n]
   yield 1n
   for (let n = 1; true; n++) {
     for (const r of b) {
