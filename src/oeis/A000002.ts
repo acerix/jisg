@@ -9,7 +9,7 @@ export default function* A000002(): Generator<bigint> {
   g.next()
   for (const r of g) {
     p = !p
-    for (let i=0n; i<r; i++) {
+    for (let i = 0n; i < r; i++) {
       yield p ? 2n : 1n
     }
   }

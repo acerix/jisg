@@ -1,16 +1,13 @@
-module.exports = {
-  roots: ['<rootDir>/src'],
-  testEnvironment: 'node',
-  testMatch: [
-    "**/__tests__/**/*.+(ts|tsx|js)",
-    "**/?(*.)+(spec|test).+(ts|tsx|js)"
-  ],
-  transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest"
-  },
-  transformIgnorePatterns: [
-    "node_modules/(?!(bigint-gcd)/)"
-  ],
+// @ts-check
+/* eslint-env node */
+
+/**
+ * An object with Jest options.
+ * @type {import('@jest/types').Config.InitialOptions}
+ */
+const options = {
+  preset: 'ts-jest',
+  resolver: 'ts-jest-resolver',
   coverageThreshold: {
     global: {
       branches: 100,
@@ -20,3 +17,5 @@ module.exports = {
     }
   }
 }
+
+module.exports = options

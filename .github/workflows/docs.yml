@@ -5,8 +5,6 @@ name: Docs
 
 on:
   push:
-    #tags:
-    #  - v*
     branches:
       - main
 
@@ -15,17 +13,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
       with:
-        node-version: '16'
+        node-version: '18'
     - run: yarn install
-    - run: yarn docs
+    - run: yarn doc
 
     - run: touch docs/.nojekyll
     - name: Deploy docs 🚀
-      uses: JamesIves/github-pages-deploy-action@4.1.4
+      uses: JamesIves/github-pages-deploy-action@v4.3.3
       with:
-        # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
         FOLDER: docs

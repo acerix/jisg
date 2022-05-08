@@ -1,4 +1,6 @@
-# jisg - JavaScript Integer Sequence Generators
+# jisg
+
+Implementations of select [OEIS](http://oeis.org/) integer sequences in JavaScript, portially inspired by [intseq](https://github.com/nicross/intseq).
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
@@ -8,8 +10,6 @@
 [![Scrutinizer Code Quality][scrutinizer-image]][scrutinizer-url]
 [![Language Grade][lgtm-image]][lgtm-url]
 [![GPL 3.0][license-image]](LICENSE)
-
-Implementations of select [OEIS](http://oeis.org/) integer sequences in JavaScript, portially inspired by [intseq](https://github.com/nicross/intseq).
 
 ## Install
 
@@ -70,19 +70,16 @@ setInterval(
 
 *   `yarn install`: Install dependencies
 *   `yarn dev`: Run tests when source files are changed
-*   `yarn cli`: Start a command line interface
-*   `yarn lint`: Lint with ESLint
-*   `yarn test`: Run Jest and Enzyme tests
-*   `yarn clean`: Delete previous build
-*   `yarn docs`: Build documentation
+*   `yarn lint --fix`: Lint with ESLint
+*   `yarn test`: Run Jest tests
+*   `yarn doc`: Build documentation
 *   `yarn build`: Production build
-*   `yarn build-all`: Production build all the things
 *   `yarn prepublish`: Prepare for publishing
 *   `yarn publish`: Publish to npm
 
 ## Feedback
 
-* Please report bug and feature requests as [GitHub Issues](https://github.com/acerix/jisg/issues)
+* Report bug and feature requests as [GitHub Issues](https://github.com/acerix/jisg/issues)
 
 ## Contributing
 
@@ -95,6 +92,10 @@ setInterval(
 1. Check code style and test coverage with `yarn prepublish` and fix any issues.
 1. Push to GitHub and submit a [pull request](https://github.com/acerix/jisg/compare).
 1. Wait. 🙂
+
+## Sponsorship
+
+* [Sponsor acerix](https://github.com/sponsors/acerix)
 
 [npm-image]: https://img.shields.io/npm/v/jisg.svg
 [npm-url]: https://npmjs.org/package/jisg

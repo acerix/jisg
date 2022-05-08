@@ -2,7 +2,7 @@
 export default function* A090822(): Generator<bigint> {
   // initial block and glue sequences
   let b = [1n], s = [2n]
-  yield b[0]
+  yield 1n
   for (let n = 1; true; n++) {
     for (const r of b) {
       yield r
@@ -21,7 +21,8 @@ export default function* A090822(): Generator<bigint> {
       // test blocks of increasing size
       for (let i = 1; i <= p.length / 2; i++) {
         // count how many times the block is repeated
-        let c = 0n, j = p.length - i
+        let c = 0n,
+          j = p.length - i
         const block = p.slice(-i).toString()
         while (p.slice(j, j + i).toString() === block) {
           j -= i

@@ -6,7 +6,7 @@ export default function* A001462(): Generator<bigint> {
   const q: bigint[] = [2n]
   let n = 3n
   for (;;) {
-    for (let i=0; i<q[0]; i++) {
+    for (let i = 0; q[0] && i < q[0]; i++) {
       yield n
       q.push(n)
     }
