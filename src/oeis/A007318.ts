@@ -4,7 +4,7 @@ export default function* A007318(): Generator<bigint> {
     let v = 1n
     for (let c = 1n; c <= r; c++) {
       yield v
-      v = v * (r - c) / c
+      v = (v * (r - c)) / c
     }
   }
 }

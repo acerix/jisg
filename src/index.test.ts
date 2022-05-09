@@ -12769,7 +12769,7 @@ describe('beginning of sequence', () => {
       1287n,
       1716n,
       1716n,
-      1287n
+      1287n,
     ],
     A007953: [
       0n,
