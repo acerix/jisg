@@ -56,7 +56,11 @@ setInterval(
 </script>
 ```
 
-[CodePen Demo](https://codepen.io/acerix/pen/MWmXbrO?editors=0010)
+#### Demos on CodePen
+
+[Fibonacci Sequence (A000045)](https://codepen.io/acerix/pen/MWmXbrO?editors=0010)
+
+[Pascal's Triangle (A007318)](https://codepen.io/acerix/pen/GRQoabJ?editors=0010)
 
 ### In Your Browser
 
