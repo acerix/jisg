@@ -4,7 +4,7 @@ function isCarmichael(n: number): boolean {
   for (let i = 3; i < max; i += 2) {
     if (cn % i === 0) {
       cn /= i
-      if (cn % i === 0 || (n-1) % (i-1)) {
+      if (cn % i === 0 || (n - 1) % (i - 1)) {
         return false
       }
     }
