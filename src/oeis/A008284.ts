@@ -1,5 +1,14 @@
 // Triangle of partition numbers: T(n,k) = number of partitions of n in which the greatest part is k, 1 <= k <= n. Also number of partitions of n into k positive parts, 1 <= k <= n.
 export default function* A008284(): Generator<bigint> {
+  yield 1n
+  for (let r = 1n; ; r++) {
+    const v = 1n
+    for (let c = 1n; c <= r; c++) {
+      yield v // first is 1
+      yield c
+    }
+  }
+  /*
   for (const n of [
     1n,
     1n,
@@ -100,4 +109,5 @@ export default function* A008284(): Generator<bigint> {
   ]) {
     yield n
   }
+  */
 }
