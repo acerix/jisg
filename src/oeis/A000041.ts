@@ -1,5 +1,6 @@
-// a(n) is the number of partitions of n (the partition numbers).
 import A000203 from './A000203'
+
+// a(n) is the number of partitions of n (the partition numbers).
 export default function* A000041(): Generator<bigint> {
   yield 1n
   const sigmaGenerator = A000203()

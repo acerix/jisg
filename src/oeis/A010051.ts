@@ -1,5 +1,6 @@
-// Characteristic function of primes
 import { isPrime } from '../utils'
+
+// Characteristic function of primes
 export default function* A010051(): Generator<bigint> {
   let n = 1n
   for (;;) {

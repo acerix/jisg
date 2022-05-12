@@ -1,5 +1,6 @@
-// Greatest prime factorization of n
 import { primeFactorization } from '../utils'
+
+// Greatest prime factorization of n
 export default function* A006530(): Generator<bigint> {
   yield 1n
   for (let n = 2n; n; n++) {

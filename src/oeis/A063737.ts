@@ -1,5 +1,6 @@
-// Digit sum of n equals the sum of its prime factors
 import { digitSum, primeFactorization } from '../utils'
+
+// Digit sum of n equals the sum of its prime factors
 export default function* A063737(): Generator<bigint> {
   let n = 2n
   for (;;) {

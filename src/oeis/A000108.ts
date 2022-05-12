@@ -1,5 +1,6 @@
-// Catalan numbers
 import { factorial } from '../utils'
+
+// Catalan numbers
 export default function* A000108(): Generator<bigint> {
   let n = 0n
   for (;;) {

@@ -1,5 +1,6 @@
-// Odious numbers
 import { decimalToBinaryDigits } from '../utils'
+
+// Odious numbers
 export default function* A000069(): Generator<bigint> {
   let n = 0n
   for (;;) {
