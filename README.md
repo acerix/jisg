@@ -90,7 +90,7 @@ setInterval(
 ### Adding a Sequence Generator
 
 1. [Fork me](https://github.com/acerix/jisg/fork) and clone your repo locally.
-1. Copy the beginning of the sequence from [The On-line Encyclopedia of Integer Sequences](https://oeis.org/) into a new entry in `OEIS_START_SAMPLES` in [main.test.ts](src/__tests__/main.test.ts).  Append an "n" to each integer so they are `BigInt` type (regex replace: `/(\d+)/\1n/`).
+1. Copy the beginning of the sequence from [The On-line Encyclopedia of Integer Sequences](https://oeis.org/) into a new entry in `OEIS_START_SAMPLES` in [index.test.ts](src/index.test.ts).  Append an "n" to each integer so they are `BigInt` type (regex replace: `/(\d+)/\1n/`).
 1. Create the source file in [src/oeis/](src/oeis/) using the OEIS number (eg. "A000001.ts") and add an entry in [index.ts](src/index.ts).
 1. Implement the generator so that the test case passes (eg. `yarn test -t A000001`).  If the test takes longer than 10 seconds, remove integers from the end of the sample until it takes less than 10 seconds.
 1. Check code style and test coverage with `yarn prepublish` and fix any issues.
