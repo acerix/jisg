@@ -86,7 +86,7 @@
 </a>
 <ol>
 <li><a href="https://github.com/acerix/jisg/fork">Fork me</a> and clone your repo locally.</li>
-<li>Copy the beginning of the sequence from <a href="https://oeis.org/">The On-line Encyclopedia of Integer Sequences</a> into a new entry in <code>OEIS_START_SAMPLES</code> in <a href="src/__tests__/main.test.ts">main.test.ts</a>.  Append an &quot;n&quot; to each integer so they are <code>BigInt</code> type (regex replace: <code>/(\d+)/\1n/</code>).</li>
+<li>Copy the beginning of the sequence from <a href="https://oeis.org/">The On-line Encyclopedia of Integer Sequences</a> into a new entry in <code>OEIS_START_SAMPLES</code> in <a href="src/index.test.ts">index.test.ts</a>.  Append an &quot;n&quot; to each integer so they are <code>BigInt</code> type (regex replace: <code>/(\d+)/\1n/</code>).</li>
 <li>Create the source file in <a href="src/oeis/">src/oeis/</a> using the OEIS number (eg. &quot;A000001.ts&quot;) and add an entry in <a href="src/index.ts">index.ts</a>.</li>
 <li>Implement the generator so that the test case passes (eg. <code>yarn test -t A000001</code>).  If the test takes longer than 10 seconds, remove integers from the end of the sample until it takes less than 10 seconds.</li>
 <li>Check code style and test coverage with <code>yarn prepublish</code> and fix any issues.</li>
