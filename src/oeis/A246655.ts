@@ -19,7 +19,6 @@ export default function* A246655(): Generator<bigint> {
     Object.keys(primes).forEach((i) => {
       const j = parseInt(i, 10)
       let value = -1n
-      console.log('j', j, primesCurrentExponent[j])
       for (
         let exponent = primesCurrentExponent[j] as bigint;
         value < n;
