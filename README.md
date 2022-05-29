@@ -60,6 +60,8 @@ setInterval(
 
 [Fibonacci Sequence (A000045)](https://codepen.io/acerix/pen/MWmXbrO?editors=0010)
 
+[Chart of A000045 with ECharts](https://codepen.io/acerix/pen/OJQQBGa?editors=0010)
+
 [Pascal's Triangle (A007318)](https://codepen.io/acerix/pen/GRQoabJ?editors=0010)
 
 ### In Your Browser
