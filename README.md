@@ -77,7 +77,7 @@ setInterval(
 *   `yarn install`: Install dependencies
 *   `yarn dev`: Run tests when source files are changed
 *   `yarn lint --fix`: Lint with ESLint
-*   `yarn test`: Run Jest tests
+*   `yarn test`: Run tests
 *   `yarn doc`: Build documentation
 *   `yarn build`: Production build
 *   `yarn prepublish`: Prepare for publishing
@@ -91,16 +91,16 @@ setInterval(
 
 ### Adding a Sequence Generator
 
-1. [Fork me](https://github.com/acerix/jisg/fork) and clone your repo locally.
+1. [Fork](https://github.com/acerix/jisg/fork) and clone your repo locally.
 1. Copy the beginning of the sequence from [The On-line Encyclopedia of Integer Sequences](https://oeis.org/) into a new entry in `OEIS_START_SAMPLES` in [index.test.ts](src/index.test.ts).  Append an "n" to each integer so they are `BigInt` type (regex replace: `/(\d+)/\1n/`).
 1. Create the source file in [src/oeis/](src/oeis/) using the OEIS number (eg. "A000001.ts") and add an entry in [index.ts](src/index.ts).
-1. Implement the generator so that the test case passes (eg. `yarn test -t A000001`).  If the test takes longer than 10 seconds, remove integers from the end of the sample until it takes less than 10 seconds.
+1. Implement the generator so that the test case passes (eg. `yarn test -t A000001`).  If the test takes longer than 10 seconds, optimize or remove integers from the end of the sample until it takes less than 10 seconds.
 1. Check code style and test coverage with `yarn prepublish` and fix any issues.
 1. Push to GitHub and submit a [pull request](https://github.com/acerix/jisg/compare).
 
 ## Sponsorship
 
-* [Sponsor acerix](https://github.com/sponsors/acerix)
+* [Sponsor jisg](https://github.com/sponsors/acerix)
 
 [npm-image]: https://img.shields.io/npm/v/jisg.svg
 [npm-url]: https://npmjs.org/package/jisg
@@ -117,3 +117,4 @@ setInterval(
 [lgtm-image]: https://img.shields.io/lgtm/alerts/g/acerix/jisg.svg
 [lgtm-url]: https://lgtm.com/projects/g/acerix/jisg/
 [license-image]: https://img.shields.io/npm/l/jisg.svg
+

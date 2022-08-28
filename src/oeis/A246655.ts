@@ -24,7 +24,7 @@ export default function* A246655(): Generator<bigint> {
         value < n;
         exponent++
       ) {
-        value = (primes[j] as bigint) ** exponent
+        value = BigInt(Number(primes[j] as bigint) ** Number(exponent))
         r.add(value)
         primesCurrentExponent[j]++
       }

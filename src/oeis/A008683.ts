@@ -18,7 +18,7 @@ export default function* A008683(): Generator<bigint> {
         k++
       }
       if (t === 1n) {
-        yield (-1n) ** k
+        yield BigInt((-1) ** Number(k))
         break search
       }
     }

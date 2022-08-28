@@ -4,7 +4,7 @@ import { primeFactorization } from '../utils'
 export default function* A001694(): Generator<bigint> {
   forEachN: for (let n = 1n; ; n++) {
     for (const i of primeFactorization(n)) {
-      const i2 = i ** 2n
+      const i2 = BigInt(Number(i) ** 2)
       if (i2 > n || n % i2 !== 0n) {
         continue forEachN
       }

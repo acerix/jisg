@@ -1,8 +1,7 @@
 {
   "name": "jisg",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "description": "Implementations of select OEIS integer sequences in JavaScript.",
-  "license": "GPL-3.0",
   "keywords": [
     "integer",
     "sequence",
@@ -11,11 +10,7 @@
     "math",
     "bigint"
   ],
-  "author": {
-    "name": "Dylan Ferris",
-    "email": "dylan@psilly.com",
-    "uri": "https://acerix.github.io/jisg/"
-  },
+  "type": "module",
   "homepage": "https://github.com/acerix/jisg#readme",
   "repository": {
     "type": "git",
@@ -24,64 +19,117 @@
   "bugs": {
     "url": "https://github.com/acerix/jisg/issues"
   },
-  "funding": "https://github.com/sponsors/acerix",
-  "main": "dist/index.umd.min.js",
-  "types": "types/index.d.ts",
-  "module": "dist/index.esm.js",
-  "browser": "dist/index.umd.min.js",
-  "cdn": "dist/index.umd.min.js",
-  "unpkg": "dist/index.umd.min.js",
-  "jsdelivr": "dist/index.umd.min.js",
-  "umd:main": "dist/index.umd.min.js",
+  "source": "src/index.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.module.js",
   "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs",
-      "script": "./dist/index.umd.min.js",
-      "default": "./dist/index.js"
-    }
+    "types": "./dist/index.d.ts",
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.modern.mjs"
   },
-  "files": [
-    "dist",
-    "src",
-    "types",
-    "utils"
-  ],
-  "bin": {
-    "jisg": "./dist/cli.js"
-  },
-  "devDependencies": {
-    "@types/eslint": "^8.4.1",
-    "@types/jest": "^28.1.0",
-    "@types/node": "^17.0.31",
-    "@types/prettier": "^2.6.0",
-    "@typescript-eslint/eslint-plugin": "^5.21.0",
-    "@typescript-eslint/parser": "^5.21.0",
-    "esbuild": "^0.14.38",
-    "eslint": "^8.14.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "jest": "^28.1.0",
-    "prettier": "^2.6.2",
-    "rollup": "^2.70.2",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "<0.32",
-    "ts-jest": "^28.0.4",
-    "ts-jest-resolver": "^2.0.0",
-    "ts-node": "^10.7.0",
-    "typedoc": "^0.22.15",
-    "typescript": "^4.6.3"
-  },
+  "types": "./dist/index.d.ts",
+  "umd:main": "dist/index.umd.js",
+  "browser": "dist/index.umd.js",
+  "cdn": "dist/index.umd.js",
+  "unpkg": "dist/index.umd.js",
+  "jsdelivr": "dist/index.umd.js",
+  "bin": "./dist/cli.js",
   "scripts": {
-    "doc": "typedoc src/index.ts",
-    "test": "jest",
     "dev": "yarn test --watch",
-    "lint": "eslint \"src/**/*.{ts,js,json}\"",
-    "prebuild": "echo \"export default '`node -p \"require('./package.json').version\"`'\" > src/version.ts",
-    "build-cli": "esbuild src/cli.ts --bundle --platform=node --minify --sourcemap=external --outfile=dist/cli.js",
-    "build": "rollup --config ./rollup.config.js && yarn build-cli",
+    "build:bundle": "microbundle build --external none --compress",
+    "build:widget": "microbundle build",
+    "build:lib": "microbundle build -i src/component.tsx",
+    "build:cli": "esbuild src/cli.ts --bundle --platform=node --minify --sourcemap=external --outfile=dist/cli.js",
+    "lint": "eslint '{src,tests}/**/*.{ts,tsx}'",
+    "test": "jest",
+    "doc": "typedoc src/index.ts",
+    "prebuild": "echo \"export default '$(node -p \"require('./package.json').version\")'\" > src/version.ts",
+    "build": "yarn build:bundle",
     "prepublish": "yarn prebuild && yarn doc && yarn lint && yarn test --coverage && yarn build",
+    "publish": "yarn npm publish",
     "cli": "ts-node src/cli.ts",
     "demo": "node demo.js"
-  }
+  },
+  "files": [
+    "dist"
+  ],
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "preact",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "ignorePatterns": [
+      "dist/",
+      "docs/",
+      "build/"
+    ],
+    "rules": {
+      "semi": [
+        2,
+        "never"
+      ]
+    }
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  },
+  "author": {
+    "name": "Dylan Ferris",
+    "email": "dylan@psilly.com",
+    "uri": "https://acerix.github.io/"
+  },
+  "license": "GPL-3.0",
+  "funding": "https://github.com/sponsors/acerix",
+  "dependencies": {
+    "preact": "10.10.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/plugin-transform-react-jsx-source": "^7.18.6",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/enzyme": "^3.10.12",
+    "@types/jest": "^28",
+    "@types/node": "^18.7.13",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "babel-jest": "^29.0.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-preact-pure": "^4.0.1",
+    "eslint": "^8.23.0",
+    "eslint-config-preact": "^1.3.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^28",
+    "jest-preset-preact": "^4.0.5",
+    "microbundle": "^0.15.1",
+    "preact-cli": "3.4.1",
+    "preact-habitat": "^3.3.0",
+    "preact-render-to-string": "^5.2.2",
+    "prettier": "2.7.1",
+    "ts-jest": "^28.0.8",
+    "ts-jest-resolver": "^2.0.0",
+    "ts-node": "^10.9.1",
+    "typedoc": "^0.23.11",
+    "typedoc-plugin-missing-exports": "^1.0.0",
+    "typescript": "<4.8"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "resolver": "ts-jest-resolver",
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "packageManager": "yarn@3.2.3"
 }

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import jisg from './'
+import { jisg } from './'
 
 // if there are args, evaluate as an expression and return the result
 if (process.argv.length > 2) {
@@ -18,7 +18,7 @@ else {
   const stdin = process.openStdin()
   stdin.setEncoding('utf8')
   process.stdout.write(prompt)
-  stdin.on('data', function (result: string) {
+  stdin.on('data', (result: string) => {
     // process.stdout.write(jisg.evaluate(result.trim()))
     process.stdout.write(result.trim())
     process.stdout.write(prompt)

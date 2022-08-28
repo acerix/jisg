@@ -1,5 +1,4 @@
-import { isPrime } from '../utils'
-import { digitSum, primeFactorization } from '../utils'
+import { isPrime, digitSum, primeFactorization } from '../utils'
 
 // Smith numbers
 export default function* A006753(): Generator<bigint> {

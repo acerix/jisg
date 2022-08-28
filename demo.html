@@ -2,14 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <title>jisg demo</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>JISG Browser Test</title>
-    <script src="./dist/index.umd.min.js"></script>
+    <link rel="stylesheet" href="./src/style.css">
   </head>
   <body>
-    <h1>JISG Browser Test</h1>
+    <h1>jisg demo</h1>
     <p><em>jisg v<span id="version">0.0.0</span></em></p>
     <pre id="out" style="white-space: pre-wrap;">A000045: </pre>
+    <script src="./dist/index.umd.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('version').innerText = jisg.version

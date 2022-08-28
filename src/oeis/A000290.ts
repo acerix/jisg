@@ -2,7 +2,7 @@
 export default function* A000290(): Generator<bigint> {
   let n = 0n
   for (;;) {
-    yield n ** 2n
+    yield BigInt(Number(n) ** Number(2n))
     n++
   }
 }

@@ -1,5 +1,4 @@
 {
   "out": "./docs",
-  "name": "jisg",
-  "tsconfig": "./tsconfig.bundle.json"
+  "name": "jisg"
 }

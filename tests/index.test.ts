@@ -1,5 +1,5 @@
-import jisg from './'
-import * as oies from './'
+import { jisg } from '../src/'
+import * as oies from '../src/index'
 
 describe('version number', () => {
   it('matches semver format', () => {

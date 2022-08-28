@@ -6,8 +6,7 @@ class jisg {
   }
 }
 
-export default jisg
-export { version }
+export { jisg, version }
 export { default as A000001 } from './oeis/A000001'
 export { default as A000002 } from './oeis/A000002'
 export { default as A000003 } from './oeis/A000003'
