@@ -1,6 +1,8 @@
 // Kolakoski sequence
 export default function* A000002(): Generator<bigint> {
-  yield 1n, 2n, 2n
+  yield 1n
+  yield 2n
+  yield 2n
   const g = A000002()
   g.next()
   g.next()
