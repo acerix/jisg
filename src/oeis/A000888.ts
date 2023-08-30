@@ -1,4 +1,4 @@
-// a(n) = (n+2)*Catalan(n) - 1
+// a(n) = (2*n)!^2 / ((n+1)!*n!^3).
 export default function* A000888(): Generator<bigint> {
   for (const n of [
     1n,
@@ -21,7 +21,7 @@ export default function* A000888(): Generator<bigint> {
     302539888334593800n,
     4334635827016110000n,
     62464383654579522000n,
-    904841214653480504400n,
+    904841214653480504400n
   ]) {
     yield n
   }
