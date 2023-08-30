@@ -1,6 +1,6 @@
 {
   "name": "jisg",
-  "version": "0.7.9",
+  "version": "0.8.0",
   "description": "Implementations of select OEIS integer sequences in JavaScript.",
   "keywords": [
     "integer",
@@ -45,7 +45,8 @@
     "doc": "typedoc src/index.ts",
     "prebuild": "echo \"export default '$(node -p \"require('./package.json').version\")'\" > src/version.ts",
     "build": "yarn build:bundle",
-    "prepublish": "yarn prebuild && yarn doc && yarn lint && yarn test --coverage && yarn build",
+    "x-prepublish": "yarn prebuild && yarn doc && yarn lint && yarn test --coverage && yarn build",
+    "prepublish": "yarn prebuild && yarn lint && yarn test --coverage && yarn build",
     "publish": "yarn npm publish",
     "cli": "ts-node src/cli.ts",
     "demo": "node demo.js"
