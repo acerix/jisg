@@ -34,6 +34,7 @@ export default function* A000225(): Generator<bigint> {
     1073741823n,
     2147483647n,
     4294967295n,
+    8589934591n
   ]) {
     yield n
   }
