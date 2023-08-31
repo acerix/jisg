@@ -8,7 +8,6 @@ Implementations of select [OEIS](http://oeis.org/) integer sequences in JavaScri
 [![Build Size][size-image]][size-url]
 [![Code Coverage][coverage-image]][coverage-url]
 [![Scrutinizer Code Quality][scrutinizer-image]][scrutinizer-url]
-[![Language Grade][lgtm-image]][lgtm-url]
 [![GPL 3.0][license-image]](LICENSE)
 
 ## Install
@@ -92,7 +91,6 @@ setInterval(
 ### Adding a Sequence Generator
 
 1. [Fork](https://github.com/acerix/jisg/fork) and clone your repo locally.
-1. Copy the beginning of the sequence from [The On-line Encyclopedia of Integer Sequences](https://oeis.org/) into a new entry in `OEIS_START_SAMPLES` in [index.test.ts](src/index.test.ts).  Append an "n" to each integer so they are `BigInt` type (regex replace: `/(\d+)/\1n/`).
 1. Create the source file in [src/oeis/](src/oeis/) using the OEIS number (eg. "A000001.ts") and add an entry in [index.ts](src/index.ts).
 1. Implement the generator so that the test case passes (eg. `yarn test -t A000001`).  If the test takes longer than 10 seconds, optimize or remove integers from the end of the sample until it takes less than 10 seconds.
 1. Check code style and test coverage with `yarn prepublish` and fix any issues.
@@ -114,7 +112,4 @@ setInterval(
 [coverage-url]: https://scrutinizer-ci.com/g/acerix/jisg/?branch=main
 [scrutinizer-image]: https://scrutinizer-ci.com/g/acerix/jisg/badges/quality-score.png?b=main
 [scrutinizer-url]: https://scrutinizer-ci.com/g/acerix/jisg/?branch=main
-[lgtm-image]: https://img.shields.io/lgtm/alerts/g/acerix/jisg.svg
-[lgtm-url]: https://lgtm.com/projects/g/acerix/jisg/
 [license-image]: https://img.shields.io/npm/l/jisg.svg
-
