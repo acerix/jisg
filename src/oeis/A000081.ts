@@ -32,6 +32,7 @@ export default function* A000081(): Generator<bigint> {
     45007066269n,
     126186554308n,
     354426847597n,
+    997171512998n
   ]) {
     yield n
   }
