@@ -9,8 +9,8 @@ import sys
 import requests
 import json
 
-START_ID = 33124
-END_ID = 400000
+START_ID = 246655
+END_ID = START_ID + 1
 
 session = requests.Session()
 
