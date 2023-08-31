@@ -30,7 +30,7 @@ function sliceGenerator(
 describe('beginning of OEIS sequence', () => {
   for (const oies_id in oies) if (oies_id[0] === 'A') {
     test(`${oies_id} is as expected`, () => {
-      fs.readFile(`tests/samples/${oies_id}.txt`, 'utf8', (read_error, data) => {
+      fs.readFile(`tests/samples/${oies_id}.csv`, 'utf8', (read_error, data) => {
         if (read_error) console.error(read_error)
         else {
           const samples = data.split(',').map(n => BigInt(n))
