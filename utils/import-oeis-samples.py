@@ -3,14 +3,14 @@
 # Download beginnings of sequences from oeis.org and add as samples for tests
 
 # Prevent accidental running
-#raise Exception('Remove this line if you are sure you want to run this script.'); exit()
+raise Exception('Remove this line if you are sure you want to run this script.'); exit()
 
 import sys
 import requests
 import json
 
-START_ID = 246655
-END_ID = START_ID + 1
+START_ID = 1
+END_ID = 2 # 400000?
 
 session = requests.Session()
 
