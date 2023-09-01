@@ -1,8 +1,6 @@
 checks:
     javascript: true
 build:
-    environment:
-        node: v20.5.1
     nodes:
         analysis:
             tests:
