@@ -1,6 +1,6 @@
 {
   "name": "jisg",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "Implementations of select OEIS integer sequences in JavaScript.",
   "keywords": [
     "integer",
