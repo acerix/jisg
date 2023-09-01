@@ -1,6 +1,7 @@
 // Number of inequivalent Boolean functions of n variables under action of complementing group.
 export default function* A000231(): Generator<bigint> {
   for (const n of [
+    2n,
     3n,
     7n,
     46n,
