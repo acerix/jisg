@@ -2,7 +2,7 @@ checks:
     javascript: true
 build:
     environment:
-        node: v20
+        node: v20.5.1
     nodes:
         analysis:
             tests:
@@ -11,7 +11,7 @@ build:
         coverage:
             tests:
                 override:
-                    -  
+                    -
                         command: 'yarn test --coverage'
                         coverage:
                             file: 'coverage/clover.xml'
