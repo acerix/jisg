@@ -30,23 +30,19 @@ function sliceGenerator(
 describe('beginning of OEIS sequence', () => {
   for (const oies_id in oies) if (oies_id[0] === 'A') {
     test(`${oies_id} is as expected`, () => {
-      fs.readFile(`tests/samples/${oies_id}.csv`, 'utf8', (read_error, data) => {
-        if (read_error) console.error(read_error)
-        else {
-          const samples = data.split(',').map(n => BigInt(n))
-          //const generator = oies[oies_id]()
-          const generator = eval(`oies['${oies_id}']()`) as Generator<bigint>
-          expect(
-            sliceGenerator(
-              generator,
-              0n,
-              BigInt(samples.length)
-            )
-          ).toEqual(
-            samples
-          )
-        }
-      })
+      const data = fs.readFileSync(`tests/samples/${oies_id}.csv`, 'utf8')
+      const samples = data.split(',').map(n => BigInt(n))
+      //const generator = oies[oies_id]()
+      const generator = eval(`oies['${oies_id}']()`) as Generator<bigint>
+      expect(
+        sliceGenerator(
+          generator,
+          0n,
+          BigInt(samples.length)
+        )
+      ).toEqual(
+        samples
+      )
     })
   }
 })
