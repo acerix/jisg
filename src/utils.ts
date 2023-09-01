@@ -1,4 +1,4 @@
-import { default as yield_prime } from './oeis/A000040'
+import { default as yieldPrime } from './oeis/A000040'
 
 export function digitSum(n: bigint): bigint {
   return String(n)
@@ -27,7 +27,7 @@ export function primeFactorization(n: bigint, multiplicity = false): bigint[] {
     return [n]
   }
   const result = []
-  const primer = yield_prime()
+  const primer = yieldPrime()
   for (;;) {
     const i = primer.next().value as bigint
     let appended = false
