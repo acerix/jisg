@@ -107,6 +107,15 @@ export default function* A008284(): Generator<bigint> {
     16n,
     23n,
     23n,
+    20n,
+    15n,
+    11n,
+    7n,
+    5n,
+    3n,
+    2n,
+    1n,
+    1n
   ]) {
     yield n
   }
