@@ -31,6 +31,9 @@
   "unpkg": "dist/index.umd.js",
   "jsdelivr": "dist/index.umd.js",
   "bin": "./dist/cli.js",
+  "engines": {
+    "node": ">14"
+  },
   "scripts": {
     "dev": "yarn test --watch",
     "build:bundle": "microbundle build --external none --compress",
