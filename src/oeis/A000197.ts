@@ -1,15 +1,17 @@
+import A000142 from './A000142'
+
 // a(n) = (n!)!.
 export default function* A000197(): Generator<bigint> {
-  /*
-  for (const n of [1n, 1n, 2n, 720n, 620448401733239439360000n]) {
-    yield n
-  }
-  */
-  let n = 1n,
-    r = 1n
-  for (;;) {
-    yield r
-    r *= n
-    n++
+  const g = A000142()
+  let i = 0n, v = 0n
+  g.next()
+  // for each factorial n
+  for (const n of A000142()) {
+    // traverse the list of factorials until factorial(n)
+    while (i < n) {
+      i++
+      v = g.next().value
+    }
+    yield v
   }
 }
