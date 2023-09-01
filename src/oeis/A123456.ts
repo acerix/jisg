@@ -1,7 +1,7 @@
 // Ludwig van Beethoven, Bagatelle No. 25, "Für Elise"
 export default function* A123456(): Generator<bigint> {
   for (const n of [
-    20n,
+    -20n,
     56n,
     55n,
     56n,
