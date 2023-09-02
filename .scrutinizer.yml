@@ -10,7 +10,7 @@ build:
             tests:
                 override:
                     -
-                        command: 'yarn test --coverage'
+                        command: 'npm test --coverage'
                         coverage:
                             file: 'coverage/clover.xml'
                             format: clover
