@@ -1,16 +1,23 @@
 checks:
-    javascript: true
+  javascript: true
 build:
+  environment:
+    node:
+      version: v16
     nodes:
-        analysis:
-            tests:
-                override:
-                    - js-scrutinizer-run
-        coverage:
-            tests:
-                override:
-                    -
-                        command: 'npm test --coverage'
-                        coverage:
-                            file: 'coverage/clover.xml'
-                            format: clover
+      analysis:
+        tests:
+          override:
+            - js-scrutinizer-run
+      coverage:
+        tests:
+          override:
+            -
+              command: 'yarn test --coverage'
+              coverage:
+                file: 'coverage/clover.xml'
+                format: clover
+  dependencies:
+    override:
+      - command: 'npm --global install yarn'
+      - command: 'yarn install'
