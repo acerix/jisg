@@ -4,19 +4,19 @@ build:
   environment:
     node:
       version: v16
-    nodes:
-      analysis:
-        tests:
-          override:
-            - js-scrutinizer-run
-      coverage:
-        tests:
-          override:
-            -
-              command: 'yarn test --coverage'
-              coverage:
-                file: 'coverage/clover.xml'
-                format: clover
+  nodes:
+    analysis:
+      tests:
+        override:
+          - js-scrutinizer-run
+    coverage:
+      tests:
+        override:
+          -
+            command: 'yarn test --coverage'
+            coverage:
+              file: 'coverage/clover.xml'
+              format: clover
   dependencies:
     override:
       - command: 'npm --global install yarn'
