@@ -1,9 +1,6 @@
 checks:
   javascript: true
 build:
-  environment:
-    node:
-      version: v16
   nodes:
     analysis:
       tests:
@@ -17,6 +14,3 @@ build:
             coverage:
               file: 'coverage/clover.xml'
               format: clover
-  dependencies:
-    override:
-      - command: 'yarn install'
