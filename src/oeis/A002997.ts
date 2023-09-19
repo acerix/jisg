@@ -14,7 +14,7 @@ function isCarmichael(n: number): boolean {
 
 // Carmichael numbers: composite numbers n such that a^(n-1) == 1 (mod n) for every a coprime to n.
 export default function* A002997(): Generator<bigint> {
-  for (let n = 3; ; n += 2) {
+  for (let n = 3; /*∞*/; n += 2) {
     if (isCarmichael(n)) {
       yield BigInt(n)
     }

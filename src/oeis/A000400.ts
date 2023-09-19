@@ -1,8 +1,6 @@
 // Powers of 6
 export default function* A000400(): Generator<bigint> {
-  let n = 1n
-  for (;;) {
+  for (let n = 1n; /*∞*/; n *= 6n) {
     yield n
-    n *= 6n
   }
 }

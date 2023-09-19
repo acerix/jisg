@@ -13,7 +13,7 @@ export default function* A000041(): Generator<bigint> {
     return sigmaMemo[n]
   }
   const p = [1n]
-  for (let n = 1; ; n++) {
+  for (let n = 1; /*∞*/; n++) {
     p[n] = 0n
     for (let j = 1; j <= n; j++) {
       p[n] += (p[n - j] as bigint) * (sigma(j) as bigint)

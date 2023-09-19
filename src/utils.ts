@@ -1,4 +1,3 @@
-import { default as yieldPrime } from './oeis/A000040'
 
 export function digitSum(n: bigint): bigint {
   return String(n)
@@ -20,6 +19,16 @@ export function isPrime(n: bigint): boolean {
     if (n % i === 0n) return false
   }
   return true
+}
+
+// This is a copy of A000040, it's not imported directly to prevent circular dependency
+// import { default as yieldPrime } from './oeis/A000040'
+export function* yieldPrime(): Generator<bigint> {
+  for (let n = 2n; /*∞*/; n++) {
+    if (isPrime(n)) {
+      yield n
+    }
+  }
 }
 
 export function primeFactorization(n: bigint, multiplicity = false): bigint[] {

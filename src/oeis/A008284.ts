@@ -2,7 +2,7 @@
 export default function* A008284(): Generator<bigint> {
   /*
   yield 1n
-  for (let r = 1n; ; r++) {
+  for (let r = 1n; /"*∞*"/; r++) {
     const v = 1n
     for (let c = 1n; c <= r; c++) {
       yield v // first is 1

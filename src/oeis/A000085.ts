@@ -4,7 +4,7 @@ export default function* A000085(): Generator<bigint> {
     current = 1n
   yield previous
   yield current
-  for (let n = 1n; ; n++) {
+  for (let n = 1n; /*∞*/; n++) {
     const next = current + previous * n
     previous = current
     current = next

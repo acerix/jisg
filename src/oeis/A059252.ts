@@ -1,6 +1,6 @@
 // Hilbert's Hamiltonian walk on N X N projected onto x axis: m(3)
 export default function* A059252(): Generator<bigint> {
-  for (let t = 0; ; t++) {
+  for (let t = 0; /*∞*/; t++) {
     const n = Math.ceil(Math.log2(t + 1) / 2)
     const s = [(n & 1) === 1, false]
     let y = 0
