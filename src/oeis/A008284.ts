@@ -1,122 +1,15 @@
 // Triangle of partition numbers: T(n,k) = number of partitions of n in which the greatest part is k, 1 <= k <= n. Also number of partitions of n into k positive parts, 1 <= k <= n.
+
+function T(n: number, k: number): number {
+  if (k < 1 || k > n) return 0
+  if (k === 1 || k === n) return 1
+  return T(n-1, k-1) + T(n-k, k)
+}
+
 export default function* A008284(): Generator<bigint> {
-  /*
-  yield 1n
-  for (let r = 1n; /"*∞*"/; r++) {
-    const v = 1n
-    for (let c = 1n; c <= r; c++) {
-      yield v // first is 1
-      yield c
+  for (let n=1; /"*∞*"/; n++) {
+    for (let k=1; k<=n; k++) {
+      yield BigInt(T(n, k))
     }
-  }
-  */
-  for (const n of [
-    1n,
-    1n,
-    1n,
-    1n,
-    1n,
-    1n,
-    1n,
-    2n,
-    1n,
-    1n,
-    1n,
-    2n,
-    2n,
-    1n,
-    1n,
-    1n,
-    3n,
-    3n,
-    2n,
-    1n,
-    1n,
-    1n,
-    3n,
-    4n,
-    3n,
-    2n,
-    1n,
-    1n,
-    1n,
-    4n,
-    5n,
-    5n,
-    3n,
-    2n,
-    1n,
-    1n,
-    1n,
-    4n,
-    7n,
-    6n,
-    5n,
-    3n,
-    2n,
-    1n,
-    1n,
-    1n,
-    5n,
-    8n,
-    9n,
-    7n,
-    5n,
-    3n,
-    2n,
-    1n,
-    1n,
-    1n,
-    5n,
-    10n,
-    11n,
-    10n,
-    7n,
-    5n,
-    3n,
-    2n,
-    1n,
-    1n,
-    1n,
-    6n,
-    12n,
-    15n,
-    13n,
-    11n,
-    7n,
-    5n,
-    3n,
-    2n,
-    1n,
-    1n,
-    1n,
-    6n,
-    14n,
-    18n,
-    18n,
-    14n,
-    11n,
-    7n,
-    5n,
-    3n,
-    2n,
-    1n,
-    1n,
-    1n,
-    7n,
-    16n,
-    23n,
-    23n,
-    20n,
-    15n,
-    11n,
-    7n,
-    5n,
-    3n,
-    2n,
-    1n,
-    1n
-  ]) {
-    yield n
   }
 }
