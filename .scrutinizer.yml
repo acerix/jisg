@@ -6,11 +6,11 @@ build:
       tests:
         override:
           - js-scrutinizer-run
-    coverage:
-      tests:
-        override:
-          -
-            command: 'yarn test --coverage'
-            coverage:
-              file: 'coverage/clover.xml'
-              format: clover
+    # coverage:
+    #   tests:
+    #     override:
+    #       -
+    #         command: 'yarn test --coverage'
+    #         coverage:
+    #           file: 'coverage/clover.xml'
+    #           format: clover/home/dylan/projects/jisg/.scrutinizer.yml
