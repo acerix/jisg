@@ -44,7 +44,7 @@ export function primeFactorization(n: bigint, multiplicity = false): bigint[] {
   }
 }
 
-function isCoprime(a: bigint, b: bigint): boolean {
+function areCoprime(a: bigint, b: bigint): boolean {
   const pfa = primeFactorization(a)
   const pfb = primeFactorization(b)
   for (const n of pfa) {
@@ -61,7 +61,7 @@ export function eulerPhi(n: bigint): bigint {
   }
   let x = 0n
   for (let i = 1n; i < n; i++) {
-    if (isCoprime(n, i)) {
+    if (areCoprime(n, i)) {
       x++
     }
   }
