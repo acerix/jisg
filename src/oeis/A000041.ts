@@ -6,10 +6,9 @@ export default function* A000041(): Generator<bigint> {
   const sigmaGenerator = A000203()
   const sigmaMemo: bigint[] = []
   function sigma(n: number) {
-    if (n in sigmaMemo) {
-      return sigmaMemo[n]
+    if (!(n in sigmaMemo)) {
+      sigmaMemo[n] = sigmaGenerator.next().value
     }
-    sigmaMemo[n] = sigmaGenerator.next().value as bigint
     return sigmaMemo[n]
   }
   const p = [1n]
