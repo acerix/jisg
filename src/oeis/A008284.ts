@@ -7,7 +7,7 @@ function T(n: bigint, k: bigint): bigint {
 }
 
 export default function* A008284(): Generator<bigint> {
-  for (let n=1n; /"*∞*"/; n++) {
+  for (let n=1n; /*∞*/; n++) {
     for (let k=1n; k<=n; k++) {
       yield T(n, k)
     }
