@@ -1,4 +1,4 @@
-// Smallest prime not dividing n.
+// Smallest number not dividing n^2.
 export default function* A236454(): Generator<bigint> {
   for (const n of [
     2n,
