@@ -5,7 +5,7 @@ import A053669 from './A053669'
 export default function* A235921(): Generator<bigint> {
   const g = A236454()
   const h = A053669()
-  for (let n = 0n; /*∞*/; n++) {
+  for (let n = 1n; /*∞*/; n++) {
     if (g.next().value !== h.next().value) {
       yield n
     }
