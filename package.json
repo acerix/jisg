@@ -1,15 +1,16 @@
 {
   "name": "jisg",
-  "version": "0.9.8",
+  "version": "0.9.9",
   "description": "Implementations of select OEIS integer sequences in JavaScript.",
   "keywords": [
     "integer",
     "sequence",
     "generator",
-    "OEIS",
     "math",
-    "bigint",
-    "JavaScript"
+    "OEIS",
+    "BigInt",
+    "JavaScript",
+    "TypeScript"
   ],
   "type": "module",
   "homepage": "https://github.com/acerix/jisg#readme",
@@ -54,23 +55,6 @@
   "files": [
     "dist"
   ],
-  "eslintConfig": {
-    "parser": "@typescript-eslint/parser",
-    "extends": [
-      "plugin:@typescript-eslint/recommended"
-    ],
-    "ignorePatterns": [
-      "dist/",
-      "docs/",
-      "build/"
-    ],
-    "rules": {
-      "semi": [
-        2,
-        "never"
-      ]
-    }
-  },
   "prettier": {
     "trailingComma": "es5",
     "tabWidth": 2,

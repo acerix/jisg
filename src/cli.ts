@@ -15,7 +15,7 @@ if (process.argv.length > 2) {
 else {
   console.log(`jisg v${jisg.version}`)
   const prompt = 'jisg> '
-  const stdin = process.openStdin()
+  const stdin = process.stdin.resume()
   stdin.setEncoding('utf8')
   process.stdout.write(prompt)
   stdin.on('data', (result: string) => {
