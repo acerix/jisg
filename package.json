@@ -47,7 +47,7 @@
     "doc": "typedoc src/",
     "prebuild": "echo \"export default '$(node -p \"require('./package.json').version\")'\" > src/version.ts",
     "build": "yarn build:bundle",
-    "prepublishandlint": "yarn prebuild && yarn doc && yarn lint && yarn test --coverage && yarn build",
+    "prepublishandlintcmonfixlintingandusethisastheprepublishcmd": "yarn prebuild && yarn doc && yarn lint && yarn test --coverage && yarn build",
     "prepublish": "yarn prebuild && yarn doc && yarn test --coverage && yarn build",
     "publish": "yarn npm publish",
     "cli": "ts-node src/cli.ts",
