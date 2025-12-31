@@ -93,7 +93,7 @@ setInterval(
 1. [Fork](https://github.com/acerix/jisg/fork) and clone your repo locally.
 1. Create the source file in "src/oeis/" using the OEIS number (e.g. "A000001.ts") and add an entry in [index.ts](src/index.ts).
 1. Add sample sequence for testing, e.g. [tests/samples/A000001.csv](tests/samples/A000001.csv)
-1. Implement the generator so that the test case passes (e.g. `yarn test -t A000001`).  If the test takes longer than 10 seconds, optimize or remove integers from the end of the sample until it takes less than 10 seconds.
+1. Implement the generator so that the test case passes (e.g. `yarn test -t A000001`). **Important:** Sequences should be generated algorithmically whenever possible. Avoid hard-coding values. Strive for simple, concise code that demonstrates the algorithm and aims to generate infinite terms efficiently. If the test takes longer than 10 seconds, optimize or remove integers from the end of the sample until it takes less than 10 seconds.
 1. Check code style and test coverage with `yarn prepublish` and fix any issues.
 1. Push to GitHub and submit a [pull request](https://github.com/acerix/jisg/compare).
 

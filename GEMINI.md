@@ -72,8 +72,11 @@ If the test times out (default 10s), reduce the number of items in the `.csv` sa
 
 ## Key Constraints
 
+*   **Algorithmic Generation:** Sequences must be generated algorithmically if possible. Never hard-code sequences if a known algorithm exists, regardless of complexity or runtime.
+*   **Educational Value:** Implementations should be simple and concise, serving as a learning tool to demonstrate the algorithm.
+*   **Infinite Generation:** Generators should aim to run forever, yielding as many terms as possible.
 *   **BigInt:** Always use `bigint` for calculations and yielded values to support large integers.
-*   **Performance:** Generators should be efficient. If a sequence is computationally expensive, ensure the test sample is small enough to pass quickly.
+*   **Performance:** Generators should be efficient, minimizing memory footprint and time complexity. If a sequence is computationally expensive, ensure the test sample is small enough to pass quickly.
 *   **Dependencies:** Avoid adding new runtime dependencies. Use standard library features.
 
 ## Automated Scaffolding
