@@ -53,28 +53,32 @@ export function primeFactorization(n: bigint, multiplicity = false): bigint[] {
   }
 }
 
-function areCoprime(a: bigint, b: bigint): boolean {
-  const pfa = primeFactorization(a)
-  const pfb = primeFactorization(b)
-  for (const n of pfa) {
-    if (pfb.indexOf(n) !== -1) {
-      return false
-    }
+export function gcd(a: bigint, b: bigint): bigint {
+  while (b > 0n) {
+    a %= b
+    ;[a, b] = [b, a]
   }
-  return true
+  return a
 }
 
 export function eulerPhi(n: bigint): bigint {
   if (n < 2n) {
     return n
   }
-  let x = 0n
-  for (let i = 1n; i < n; i++) {
-    if (areCoprime(n, i)) {
-      x++
+  let result = n
+  let temp = n
+  for (let i = 2n; i * i <= temp; i++) {
+    if (temp % i === 0n) {
+      while (temp % i === 0n) {
+        temp /= i
+      }
+      result -= result / i
     }
   }
-  return x
+  if (temp > 1n) {
+    result -= result / temp
+  }
+  return result
 }
 
 export function factorial(n: bigint): bigint {
