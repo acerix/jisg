@@ -88,6 +88,12 @@ export function isSquareFree(n: bigint): boolean {
   return factors.length === unique.size
 }
 
+export function isPrimePower(n: bigint): boolean {
+  if (n === 1n) return true
+  const factors = primeFactorization(n)
+  return factors.length === 1
+}
+
 export function sigma(n: bigint): bigint {
   if (n === 1n) return 1n
   let result = 1n
