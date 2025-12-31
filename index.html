@@ -40,7 +40,7 @@
 <li><a href="https://github.com/acerix/jisg/fork">Fork</a> and clone your repo locally.</li>
 <li>Create the source file in &quot;src/oeis/&quot; using the OEIS number (e.g. &quot;A000001.ts&quot;) and add an entry in <a href="modules.html">index.ts</a>.</li>
 <li>Add sample sequence for testing, e.g. <a href="media/A000001.csv">tests/samples/A000001.csv</a></li>
-<li>Implement the generator so that the test case passes (e.g. <code>yarn test -t A000001</code>).  If the test takes longer than 10 seconds, optimize or remove integers from the end of the sample until it takes less than 10 seconds.</li>
+<li>Implement the generator so that the test case passes (e.g. <code>yarn test -t A000001</code>). <strong>Important:</strong> Sequences should be generated algorithmically whenever possible. Avoid hard-coding values. Strive for simple, concise code that demonstrates the algorithm and aims to generate infinite terms efficiently. If the test takes longer than 10 seconds, optimize or remove integers from the end of the sample until it takes less than 10 seconds.</li>
 <li>Check code style and test coverage with <code>yarn prepublish</code> and fix any issues.</li>
 <li>Push to GitHub and submit a <a href="https://github.com/acerix/jisg/compare">pull request</a>.</li>
 </ol>
