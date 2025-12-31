@@ -1,107 +1,29 @@
+import { gcd } from '../utils'
+
 // Number of classes of primitive positive definite binary quadratic forms of discriminant D = -4n
 export default function* A000003(): Generator<bigint> {
-  for (const n of [
-    1n,
-    1n,
-    1n,
-    1n,
-    2n,
-    2n,
-    1n,
-    2n,
-    2n,
-    2n,
-    3n,
-    2n,
-    2n,
-    4n,
-    2n,
-    2n,
-    4n,
-    2n,
-    3n,
-    4n,
-    4n,
-    2n,
-    3n,
-    4n,
-    2n,
-    6n,
-    3n,
-    2n,
-    6n,
-    4n,
-    3n,
-    4n,
-    4n,
-    4n,
-    6n,
-    4n,
-    2n,
-    6n,
-    4n,
-    4n,
-    8n,
-    4n,
-    3n,
-    6n,
-    4n,
-    4n,
-    5n,
-    4n,
-    4n,
-    6n,
-    6n,
-    4n,
-    6n,
-    6n,
-    4n,
-    8n,
-    4n,
-    2n,
-    9n,
-    4n,
-    6n,
-    8n,
-    4n,
-    4n,
-    8n,
-    8n,
-    3n,
-    8n,
-    8n,
-    4n,
-    7n,
-    4n,
-    4n,
-    10n,
-    6n,
-    6n,
-    8n,
-    4n,
-    5n,
-    8n,
-    6n,
-    4n,
-    9n,
-    8n,
-    4n,
-    10n,
-    6n,
-    4n,
-    12n,
-    8n,
-    6n,
-    6n,
-    4n,
-    8n,
-    8n,
-    8n,
-    4n,
-    8n,
-    6n,
-    4n,
-  ]) {
-    yield n
+  for (let n = 1n; ; n++) {
+    let count = 0n
+    for (let k = 0n; ; k++) {
+      const b = 2n * k
+      if (3n * b * b > 4n * n) break
+
+      const m = n + k * k
+      for (let a = 1n; a * a <= m; a++) {
+        if (m % a === 0n) {
+          const c = m / a
+          if (b <= a && a <= c) {
+            if (gcd(a, gcd(b, c)) === 1n) {
+              if (b === a || a === c || b === 0n) {
+                count += 1n
+              } else {
+                count += 2n
+              }
+            }
+          }
+        }
+      }
+    }
+    yield count
   }
 }
