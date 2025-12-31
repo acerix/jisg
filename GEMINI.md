@@ -75,3 +75,35 @@ If the test times out (default 10s), reduce the number of items in the `.csv` sa
 *   **BigInt:** Always use `bigint` for calculations and yielded values to support large integers.
 *   **Performance:** Generators should be efficient. If a sequence is computationally expensive, ensure the test sample is small enough to pass quickly.
 *   **Dependencies:** Avoid adding new runtime dependencies. Use standard library features.
+
+## Automated Scaffolding
+
+To quickly add a new sequence, use the helper script `utils/add-from-oeis.py`. This script fetches data from OEIS, creates the sample file, creates a placeholder implementation, and outputs the OEIS data (including formulas and pseudocode) for you to analyze.
+
+### Usage
+
+```bash
+./utils/add-from-oeis.py <OEIS_ID>
+```
+
+**Example:**
+
+```bash
+./utils/add-from-oeis.py A000123
+```
+
+### Interpreting the Output
+
+The script prints the JSON object for the sequence. Key fields to look for:
+
+*   **`name`**: The description of the sequence.
+*   **`data`**: The sequence values (already saved to the CSV sample file).
+*   **`formula`**: Formulas that can often be directly translated to code.
+*   **`program`**: Code in other languages (PARI, Mathematica, etc.) which is very helpful for understanding the algorithm.
+*   **`comment`**: Additional context and properties.
+
+After running the script:
+1.  Read the JSON output to understand the sequence logic.
+2.  Edit `src/oeis/<OEIS_ID>.ts` to implement the logic.
+3.  Register the sequence in `src/index.ts`.
+4.  Run tests.

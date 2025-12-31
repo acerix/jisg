@@ -7,6 +7,7 @@ class jisg {
 }
 
 export { jisg, version }
+export { default as randint } from './extra/randint'
 export { default as A000001 } from './oeis/A000001'
 export { default as A000002 } from './oeis/A000002'
 export { default as A000003 } from './oeis/A000003'
@@ -301,6 +302,7 @@ export { default as A008284 } from './oeis/A008284'
 export { default as A008683 } from './oeis/A008683'
 export { default as A010051 } from './oeis/A010051'
 export { default as A010054 } from './oeis/A010054'
+export { default as A012345 } from './oeis/A012345'
 export { default as A019506 } from './oeis/A019506'
 export { default as A051023 } from './oeis/A051023'
 export { default as A053669 } from './oeis/A053669'
@@ -317,4 +319,3 @@ export { default as A236432 } from './oeis/A236432'
 export { default as A236454 } from './oeis/A236454'
 export { default as A246655 } from './oeis/A246655'
 export { default as A342585 } from './oeis/A342585'
-export { default as randint } from './extra/randint'
