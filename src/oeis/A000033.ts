@@ -1,29 +1,20 @@
+import { combinations, factorial } from '../utils'
+
 // Coefficients of ménage hit polynomials.
+// a(n) = Sum_{k=2..n} (-1)^(k-2) * (2n/(2n-k)) * C(2n-k, k) * (n-k)! * C(k, 2)
 export default function* A000033(): Generator<bigint> {
-  for (const n of [
-    0n,
-    2n,
-    3n,
-    4n,
-    40n,
-    210n,
-    1477n,
-    11672n,
-    104256n,
-    1036050n,
-    11338855n,
-    135494844n,
-    1755206648n,
-    24498813794n,
-    366526605705n,
-    5851140525680n,
-    99271367764480n,
-    1783734385752162n,
-    33837677493828171n,
-    675799125332580020n,
-    14173726082929399560n,
-    311462297063636041906n,
-  ]) {
-    yield n
+  for (let n = 1n; ; n++) {
+    let sum = 0n
+    for (let k = 2n; k <= n; k++) {
+      const term =
+        (2n * n * combinations(2n * n - k, k) * factorial(n - k) * combinations(k, 2n)) /
+        (2n * n - k)
+      if (k % 2n === 0n) {
+        sum += term
+      } else {
+        sum -= term
+      }
+    }
+    yield sum
   }
 }

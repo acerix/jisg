@@ -120,10 +120,22 @@ export function factorial(n: bigint): bigint {
   if (n === 0n) {
     return 1n
   }
-  for (let i = n - 1n; i > 1n; i--) {
-    n *= i
+  let res = 1n
+  for (let i = 2n; i <= n; i++) {
+    res *= i
   }
-  return n
+  return res
+}
+
+export function combinations(n: bigint, r: bigint): bigint {
+  if (r < 0n || r > n) return 0n
+  if (r === 0n || r === n) return 1n
+  if (r > n / 2n) r = n - r
+  let res = 1n
+  for (let i = 1n; i <= r; i++) {
+    res = (res * (n - i + 1n)) / i
+  }
+  return res
 }
 
 export function decimalToBinaryDigits(n: bigint): string {
