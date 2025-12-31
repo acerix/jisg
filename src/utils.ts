@@ -81,6 +81,28 @@ export function eulerPhi(n: bigint): bigint {
   return result
 }
 
+export function sigma(n: bigint): bigint {
+  if (n === 1n) return 1n
+  let result = 1n
+  let temp = n
+  for (let i = 2n; i * i <= temp; i++) {
+    if (temp % i === 0n) {
+      let pSum = 1n
+      let pTerm = 1n
+      while (temp % i === 0n) {
+        temp /= i
+        pTerm *= i
+        pSum += pTerm
+      }
+      result *= pSum
+    }
+  }
+  if (temp > 1n) {
+    result *= (temp + 1n)
+  }
+  return result
+}
+
 export function factorial(n: bigint): bigint {
   if (n === 0n) {
     return 1n
