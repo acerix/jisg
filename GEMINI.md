@@ -78,7 +78,7 @@ If the test times out (default 10s), reduce the number of items in the `.csv` sa
 
 ## Automated Scaffolding
 
-To quickly add a new sequence, use the helper script `utils/add-from-oeis.py`. This script fetches data from OEIS, creates the sample file, creates a placeholder implementation, and outputs the OEIS data (including formulas and pseudocode) for you to analyze.
+To quickly add a new sequence, use the helper script `utils/add-from-oeis.py`. 
 
 ### Usage
 
@@ -87,10 +87,17 @@ To quickly add a new sequence, use the helper script `utils/add-from-oeis.py`. T
 ```
 
 **Example:**
-
 ```bash
 ./utils/add-from-oeis.py A000123
 ```
+
+### What the script does:
+1.  **Fetches Data:** Retrieves the sequence JSON from OEIS.
+2.  **Validates:** Fails if `src/oeis/<OEIS_ID>.ts` already exists to prevent accidental overwriting.
+3.  **Creates Sample:** Writes `tests/samples/<OEIS_ID>.csv` using the `data` field from the JSON.
+4.  **Scaffolds Implementation:** Creates a placeholder `src/oeis/<OEIS_ID>.ts` with the sequence name as a comment.
+5.  **Registers Sequence:** Automatically adds the export to `src/index.ts` and sorts the exports numerically.
+6.  **Outputs Information:** Prints the full JSON to the console for you to analyze.
 
 ### Interpreting the Output
 
@@ -98,12 +105,13 @@ The script prints the JSON object for the sequence. Key fields to look for:
 
 *   **`name`**: The description of the sequence.
 *   **`data`**: The sequence values (already saved to the CSV sample file).
-*   **`formula`**: Formulas that can often be directly translated to code.
-*   **`program`**: Code in other languages (PARI, Mathematica, etc.) which is very helpful for understanding the algorithm.
-*   **`comment`**: Additional context and properties.
+*   **`formula`**: Recurrence relations or closed-form expressions.
+*   **`program`**: Implementation examples in other languages (PARI/GP, Mathematica, Python, etc.).
+*   **`comment`**: Mathematical properties and context.
 
-After running the script:
-1.  Read the JSON output to understand the sequence logic.
-2.  Edit `src/oeis/<OEIS_ID>.ts` to implement the logic.
-3.  Register the sequence in `src/index.ts`.
-4.  Run tests.
+### Implementation Tips
+
+1.  **Check `src/utils.ts`:** Look for existing utility functions (like `isPrime`, `gcd`, etc.) before implementing your own.
+2.  **Recursive Generators:** Some sequences are easier to implement by calling themselves (see `src/oeis/A000002.ts` for an example).
+3.  **Memory Management:** If a sequence depends on all previous terms, store them in an array within the generator.
+4.  **BigInt Precision:** Remember that standard `Math` functions (like `Math.sqrt`) work with `number` (floats) and may lose precision for large `bigint` values. Use integer-based algorithms where possible.
