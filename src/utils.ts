@@ -81,6 +81,13 @@ export function eulerPhi(n: bigint): bigint {
   return result
 }
 
+export function isSquareFree(n: bigint): boolean {
+  if (n <= 1n) return true
+  const factors = primeFactorization(n, true)
+  const unique = new Set(factors)
+  return factors.length === unique.size
+}
+
 export function sigma(n: bigint): bigint {
   if (n === 1n) return 1n
   let result = 1n
