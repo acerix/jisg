@@ -115,6 +115,13 @@ The script prints the JSON object for the sequence. Key fields to look for:
 ### Implementation Tips
 
 1.  **Check `src/utils.ts`:** Look for existing utility functions (like `isPrime`, `gcd`, etc.) before implementing your own.
-2.  **Recursive Generators:** Some sequences are easier to implement by calling themselves (see `src/oeis/A000002.ts` for an example).
-3.  **Memory Management:** If a sequence depends on all previous terms, store them in an array within the generator.
-4.  **BigInt Precision:** Remember that standard `Math` functions (like `Math.sqrt`) work with `number` (floats) and may lose precision for large `bigint` values. Use integer-based algorithms where possible.
+2.  **Reuse Existing Generators:** If a sequence depends on another OEIS sequence (e.g., `a(n) = A000045(n) - 1`), import the generator from its file instead of reimplementing it.
+    ```typescript
+    import A000045 from './A000045'
+    // ...
+    const g = A000045()
+    const val = g.next().value
+    ```
+3.  **Recursive Generators:** Some sequences are easier to implement by calling themselves (see `src/oeis/A000002.ts` for an example).
+4.  **Memory Management:** If a sequence depends on all previous terms, store them in an array within the generator.
+5.  **BigInt Precision:** Remember that standard `Math` functions (like `Math.sqrt`) work with `number` (floats) and may lose precision for large `bigint` values. Use integer-based algorithms where possible.
