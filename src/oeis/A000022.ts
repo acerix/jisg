@@ -11,8 +11,7 @@ export default function* A000022(): Generator<bigint> {
   const Q: bigint[][] = [] // Q[i] is poly for rooted trees height <= i, root degree <= 4
   const q2: bigint[][] = [] // q2[i] is poly for height i with exactly one branch of height i-1
 
-  // B_{-1} = 0
-  B[-1 as any] = new Array(limit).fill(0n)
+  const zeroPoly = new Array(limit).fill(0n)
 
   const polySubstitute = (p: bigint[], k: number): bigint[] => {
     const res = new Array(limit).fill(0n)
@@ -79,8 +78,8 @@ export default function* A000022(): Generator<bigint> {
   const totalC = new Array(limit).fill(0n)
 
   for (let i = 0; i < 50; i++) {
-    const prevB = B[i - 1] || B[-1 as any]
-    const prevPrevB = B[i - 2] || B[-1 as any]
+    const prevB = B[i - 1] || zeroPoly
+    const prevPrevB = B[i - 2] || zeroPoly
 
     // B[i] = x * Z_le3(B[i-1])
     const Z3_prev = getZ_le3(prevB)
@@ -100,7 +99,7 @@ export default function* A000022(): Generator<bigint> {
     for (let j = 0; j + 1 < limit; j++) q2[i][j + 1] = HZ3[j]
 
     // C[i] = Q[i] - Q[i-1] - q2[i]
-    const prevQ = Q[i - 1] || B[-1 as any]
+    const prevQ = Q[i - 1] || zeroPoly
     const Ci = polySub(polySub(Q[i], prevQ), q2[i])
 
     for (let j = 0; j < limit; j++) totalC[j] += Ci[j]

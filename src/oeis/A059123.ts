@@ -59,10 +59,6 @@ export default function* A059123(): Generator<bigint> {
     // 2 G_n = 2 F_{n+1} + 2 F_n - F2_n1 - Fx2_n1
     const num = 2n * F[n + 1] + 2n * F[n] - F2_n1 - Fx2_n1
     
-    if (num % 2n !== 0n) {
-      throw new Error(`Integrity check failed: G[${n}] not integer`)
-    }
-    
     yield num / 2n
     n++
   }

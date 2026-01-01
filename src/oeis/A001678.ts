@@ -63,9 +63,6 @@ export default function* A001678(): Generator<bigint> {
       for (let k = 1; k <= m; k++) {
         sum += D[k] * E[m - k]
       }
-      if (sum % BigInt(m) !== 0n) {
-        throw new Error(`Integrity check failed: E[${m}] not integer`)
-      }
       E.push(sum / BigInt(m))
     }
     

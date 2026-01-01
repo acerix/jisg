@@ -2,7 +2,6 @@
 
 const FACTORIALS: bigint[] = [1n]
 function factorial(n: number): bigint {
-  if (n < 0) return 0n
   while (FACTORIALS.length <= n) {
     FACTORIALS.push(FACTORIALS[FACTORIALS.length - 1] * BigInt(FACTORIALS.length))
   }
@@ -10,7 +9,6 @@ function factorial(n: number): bigint {
 }
 
 function nCr(n: number, r: number): bigint {
-  if (r < 0 || r > n) return 0n
   return factorial(n) / (factorial(r) * factorial(n - r))
 }
 
