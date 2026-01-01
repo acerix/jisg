@@ -1,4 +1,4 @@
-import { polyAdd, polyMul } from '../src/polynomial'
+import { polyAdd, polyMul, polySub } from '../src/polynomial'
 import { decimalToBinaryDigits, combinations } from '../src/utils'
 import A000001 from '../src/oeis/A000001'
 import * as utils from '../src/utils'
@@ -16,6 +16,12 @@ describe('coverage', () => {
     expect(polyAdd([1n], [2n])).toEqual([3n])
     expect(polyAdd([1n], [2n, 3n])).toEqual([3n, 3n])
     expect(polyAdd([1n, 2n], [3n])).toEqual([4n, 2n])
+  })
+
+  it('polySub works', () => {
+    expect(polySub([3n], [1n])).toEqual([2n])
+    expect(polySub([3n], [1n, 2n])).toEqual([2n, -2n])
+    expect(polySub([3n, 2n], [1n])).toEqual([2n, 2n])
   })
 
   it('polyMul works with limits and breaks', () => {

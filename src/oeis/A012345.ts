@@ -77,9 +77,7 @@ export default function* A012345(): Generator<bigint> {
     let total = 0n
     for (let k = 1; k <= m; k += 2) {
       const val = y_powers[k][m]
-      if (val !== 0n) {
-        total += val / factorial(k)
-      }
+      total += val / factorial(k)
     }
     
     yield total
